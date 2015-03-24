@@ -1,0 +1,68 @@
+//package myProject
+
+import scala.collection.mutable.Stack
+import scala.util.Random
+
+class Player (val name:String, val seat:Int){
+
+}
+
+class Card (val rank: Int, val suit: String){
+  private val validSuits:Array[String]=Array("Heart","Club","Spade","Diamond")
+  private val validRanks:Array[Int]=Array(1,2,3,4,5,6,7,8,9,10,11,12,13)
+  def isValid:Boolean=validSuits.contains(suit)&&validRanks.contains(rank)
+  def isHeart:Boolean= (suit=="Heart")
+  def isClub:Boolean= (suit=="Club")
+  def isSpade:Boolean=(suit=="Spade")
+  def isDiamond:Boolean=(suit=="Diamond")
+  def isHigher(compare:Card):Boolean=(rank>compare.rank)
+}
+
+class Deck (val name: String, var cards: Stack[Card]){
+	def showContents= cards
+	def isEmpty= cards.isEmpty
+	def topCard= cards.head
+	def deal= cards.pop()
+	def length=cards.length
+  def shuffle={
+    cards=Random.shuffle(cards)
+  }
+}
+
+class Hand (val player: Player, var cardArray: Array[Card]){
+	private val nullCard=new Card(-1,null)
+  def init = {
+		val blank=Array.fill[Card](13)(nullCard)
+		this.cardArray=blank
+	}
+	def showPlayer= this.player
+	def showCards= this.cardArray
+	def draw(deck: Deck)={
+		if (deck.isEmpty) this.cardArray
+		else{
+			for (index<- 0 until this.cardArray.length-1){
+				if (this.cardArray(index)==nullCard){
+					this.cardArray(index)=deck.deal
+				}
+			}
+		}
+	}
+}
+
+class DiscardPile{
+}
+
+class PlayArea{
+}
+
+class Scoreboard{
+}
+
+class TurnQueue{
+}
+
+class SimControll{
+}
+
+class WinnerCheck{
+}
