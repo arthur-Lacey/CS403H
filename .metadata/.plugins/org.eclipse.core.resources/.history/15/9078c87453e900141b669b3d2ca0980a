@@ -1,0 +1,26 @@
+package myProject
+
+import scala.collection.mutable.Stack
+import scala.collection.mutable.Queue
+import scala.util.Random
+
+class Controller(view:View,model:Model) {
+  var mdl:Option[Model]= None
+  mdl=Some(model)//mdl.get
+  def SHOW_PLAYING_AREA{}
+  def SHOW_PLAYER_ORDER{
+    val queueString={
+      for (y<-x.queue)
+    }
+  }
+  def ADVANCE_ORDER{}
+  def WINNER_CHECK{}
+  def DO_MOVE {}
+  def DO_TURN{}
+  def DO_GAME{}
+  def INIT{
+    var x= new m.heartGame
+    x.newRound
+    view.newGame
+  }
+}

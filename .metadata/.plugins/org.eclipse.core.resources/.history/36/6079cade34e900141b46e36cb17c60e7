@@ -1,0 +1,197 @@
+package myProject
+
+class Controller(view:View,model:Model) {
+  var gameStructure= new Structure
+  var input= -1
+  def SHOW_PLAYING_AREA{
+    view.showPlayingArea
+  }
+  def SHOW_PLAYER_ORDER= ???
+  def ADVANCE_ORDER= ???
+  def WINNER_CHECK= ???
+  def DO_MOVE= ???
+  def DO_TURN= ???
+  def DO_GAME= ???
+  def INIT{
+    view.MainMenu
+    
+    
+    
+  }
+  while(input!=9) {
+    if (input==0) view.help
+    else if (input==1) SHOW_PLAYING_AREA
+    else if (input==2) SHOW_PLAYER_ORDER
+    else if (input==3) ADVANCE_ORDER
+    else if (input==4) INIT
+    else if (input==5) WINNER_CHECK
+    else if (input==6) DO_MOVE
+    else if (input==7) DO_TURN
+    else if (input==8) DO_GAME
+    else view.error
+    input=readInt()
+  }
+  view.exit
+  
+  class Structure{
+  val scoreBoard = new model.Scoreboard
+  val hand1= new model.Hand(0)
+  val hand2= new model.Hand(1)
+  val hand3= new model.Hand(2)
+  val hand4= new model.Hand(3)
+  var handArray=Array.ofDim[model.Hand](4)
+  var playArea=new PlayArea
+  val queue= new model.TurnQueue
+  val twoHeart=new model.Card(2,"Heart")
+  val threeHeart=new model.Card(3,"Heart")
+  val fourHeart=new model.Card(4,"Heart")
+  val fiveHeart=new model.Card(5,"Heart")
+  val sixHeart=new model.Card(6,"Heart")
+  val sevenHeart=new model.Card(7,"Heart")  
+  val eightHeart=new model.Card(8,"Heart")
+  val nineHeart=new model.Card(9,"Heart")
+  val tenHeart=new model.Card(10,"Heart")
+  val jackHeart=new model.Card(11,"Heart") 
+  val queenHeart=new model.Card(12,"Heart")
+  val kingHeart=new model.Card(13,"Heart")
+  val aceHeart=new model.Card(14,"Heart")
+  val twoSpade=new model.Card(2,"Spade")
+  val threeSpade=new model.Card(3,"Spade")
+  val fourSpade=new model.Card(4,"Spade")
+  val fiveSpade=new model.Card(5,"Spade")
+  val sixSpade=new model.Card(6,"Spade")
+  val sevenSpade=new model.Card(7,"Spade")  
+  val eightSpade=new model.Card(8,"Spade")
+  val nineSpade=new model.Card(9,"Spade")
+  val tenSpade=new model.Card(10,"Spade")
+  val jackSpade=new model.Card(11,"Spade") 
+  val queenSpade=new model.Card(12,"Spade")
+  val kingSpade=new model.Card(13,"Spade")
+  val aceSpade=new model.Card(14,"Spade")
+  val twoClub=new model.Card(2,"Club")
+  val threeClub=new model.Card(3,"Club")
+  val fourClub=new model.Card(4,"Club")
+  val fiveClub=new model.Card(5,"Club")
+  val sixClub=new model.Card(6,"Club")
+  val sevenClub=new model.Card(7,"Club")  
+  val eightClub=new model.Card(8,"Club")
+  val nineClub=new model.Card(9,"Club")
+  val tenClub=new model.Card(10,"Club")
+  val jackClub=new model.Card(11,"Club") 
+  val queenClub=new model.Card(12,"Club")
+  val kingClub=new model.Card(13,"Club")
+  val aceClub=new model.Card(14,"Club")
+  val twoDiamond=new model.Card(2,"Diamond")
+  val threeDiamond=new model.Card(3,"Diamond")
+  val fourDiamond=new model.Card(4,"Diamond")
+  val fiveDiamond=new model.Card(5,"Diamond")
+  val sixDiamond=new model.Card(6,"Diamond")
+  val sevenDiamond=new model.Card(7,"Diamond")  
+  val eightDiamond=new model.Card(8,"Diamond")
+  val nineDiamond=new model.Card(9,"Diamond")
+  val tenDiamond=new model.Card(10,"Diamond")
+  val jackDiamond=new model.Card(11,"Diamond") 
+  val queenDiamond=new model.Card(12,"Diamond")
+  val kingDiamond=new model.Card(13,"Diamond")
+  val aceDiamond=new model.Card(14,"Diamond")
+  var round=0
+  var lastHandWentTo= -1
+  
+  
+  def NewRound={
+    val standardDeck = new model.Deck("Standard",Stack[model.Card](twoHeart,threeHeart,fourHeart,fiveHeart,sixHeart,sevenHeart,
+    eightHeart,nineHeart,tenHeart,jackHeart,queenHeart,kingHeart,aceHeart,twoSpade,threeSpade,
+    fourSpade,fiveSpade,sixSpade,sevenSpade,eightSpade,nineSpade,tenSpade,jackSpade,queenSpade,
+    kingSpade,aceSpade,twoClub,threeClub,fourClub,fiveClub,sixClub,sevenClub,eightClub,nineClub,
+    tenClub,jackClub,queenClub,kingClub,aceClub,twoDiamond,threeDiamond,fourDiamond,fiveDiamond,
+    sixDiamond,sevenDiamond,eightDiamond,nineDiamond,tenDiamond,jackDiamond,queenDiamond,kingDiamond,aceDiamond))
+    standardDeck.shuffle
+    hand1.draw(standardDeck)
+    hand2.draw(standardDeck)
+    hand3.draw(standardDeck)
+    hand4.draw(standardDeck)
+    handArray(0)=hand1
+    handArray(1)=hand2
+    handArray(2)=hand3
+    handArray(3)=hand4
+    round=1
+    }
+  def loadQueue={
+    if (round<=1){
+      if (hand1.cardSet.contains(twoClub)) queue.load(0)
+      else if (hand2.cardSet.contains(twoClub)) queue.load(1)
+      else if (hand3.cardSet.contains(twoClub)) queue.load(2)
+      else queue.load(3)
+    }
+    else queue.load(lastHandWentTo)
+  }
+  def doFirstTurn(seat:Int, playArea:model.PlayArea){
+    val playedCard=handArray(seat).play("Any")
+    playArea.lead=playedCard.suit
+    playArea.assignCard(seat,playedCard)
+  }
+  def doRegularTurn(seat:Int,playArea:model.PlayArea){
+    val playedCard=handArray(seat).play(playArea.lead)
+    playArea.assignCard(seat,playedCard)
+  }
+  
+  def showQueue{
+    println("the queue is: ")
+    for (x<- queue) println(x)
+  }
+  
+  def completeTrick{
+    println("Full Turn")
+    loadQueue
+    //showQueue
+    playArea=new model.PlayArea
+    var currTurn=queue.dequeue
+    doFirstTurn(currTurn, playArea)
+   
+    currTurn=queue.dequeue
+    doRegularTurn(currTurn,playArea)
+    
+    currTurn=queue.dequeue
+    doRegularTurn(currTurn,playArea)
+   
+    currTurn=queue.dequeue
+    doRegularTurn(currTurn,playArea)
+    
+    val score=playArea.calculateScore
+   
+    scoreBoard.addScore(playArea.max,score)
+    
+    lastHandWentTo=playArea.max
+    round=round+1
+  }
+  def completeRound{
+    println("Full Round")
+    while (handArray(0).cardSet.size+handArray(1).cardSet.size+handArray(2).cardSet.size+handArray(2).cardSet.size>0){
+        completeTrick
+        }
+    if (scoreBoard.loserCheck==false){
+      NewRound
+      println("------------------------------------------")
+      println("Round Complete the score is:")
+      println("Player 1: "+scoreBoard.scores(0).toString)
+      println("Player 2: "+scoreBoard.scores(1).toString)
+      println("Player 3: "+scoreBoard.scores(2).toString)
+      println("Player 4: "+scoreBoard.scores(3).toString)
+      println("")
+    }
+    else {
+    println("")
+    println("GAME OVER")
+    if (scoreBoard.winner==0) println("player1 wins")
+    else if (scoreBoard.winner==1) println("player2 wins")
+    else if (scoreBoard.winner==2) println("player3 wins")
+    else println("player4 wins")
+    }
+  }
+  def completeGame{
+    println("Full Game")
+    while (scoreBoard.loserCheck==false){
+      completeRound
+    } 
+  }
+  }

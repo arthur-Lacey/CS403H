@@ -1,0 +1,5 @@
+package myProject
+
+class Controller(view:View,model:Model) {
+  def init= ???
+}

@@ -1,0 +1,59 @@
+package myProject
+
+class Controller(view:View,model:Model) {
+  
+  view.MainMenu
+  var game=new model.Structure
+  var input=readInt()
+  def SHOW_PLAYING_AREA{
+    val hands=model.Structure.handArray
+  }
+  def SHOW_PLAYER_ORDER= ???
+  def ADVANCE_ORDER= ???
+  def WINNER_CHECK= ???
+  def DO_MOVE= ???
+  def DO_TURN= ???
+  def DO_GAME= ???
+  def INIT{
+    
+    
+  }
+  while(input!=9) {
+    if (input==0) view.help
+    else if (input==1) SHOW_PLAYING_AREA
+    else if (input==2) SHOW_PLAYER_ORDER
+    else if (input==3) ADVANCE_ORDER
+    else if (input==4) INIT
+    else if (input==5) WINNER_CHECK
+    else if (input==6) DO_MOVE
+    else if (input==7) DO_TURN
+    else if (input==8) DO_GAME
+    else view.error
+    input=readInt()
+  }
+  view.exit
+  
+    
+  }
+  }
+}
+
+    println("1-> Shows the playing area")
+    println("2-> Shows the player order")
+    println("3-> Advances the player order")
+    println("4-> Starts a new game")
+    println("5-> Checks for a winner")
+    println("6-> completes a move for the player currently up")
+    println("7-> computes four moves, a complete trick")
+    println("8-> completes a full game and displays the winner")
+    println("9-> exit the game")
+/*
+•SHOW PLAYING AREA - displays everything necessary to observe the progress of the game
+•SHOW PLAYER ORDER - shows player names in the order that they will play
+•ADVANCE ORDER - moves the player who is currently "up" to the end of the playing order, and advances the "next" player to be "up"
+•INITIALIZE GAME - performs all actions necessary to prepare the game for the first move (deal cards, place tokens in initial spots, etc.); can also be used to reset the game simulation
+•CHECK FOR WINNER - determine whether any player has won the game, and if so, identity that player
+•DO MOVE - the player who is currently "up" in the player order performs all move actions, and the player order advances
+•DO TURN - performs DO MOVE four times, as well as CHECK FOR WINNER at appropriate times
+•DO GAME - performs DO TURN until the game is won
+*/

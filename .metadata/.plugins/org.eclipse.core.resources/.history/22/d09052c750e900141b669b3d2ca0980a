@@ -1,0 +1,18 @@
+package myProject
+
+import scala.collection.mutable.Stack
+import scala.collection.mutable.Queue
+import scala.util.Random
+
+class Controller(view:View,model:Model) {
+  def SHOW_PLAYING_AREA{}
+  def SHOW_PLAYER_ORDER{}
+  def ADVANCE_ORDER{}
+  def WINNER_CHECK{}
+  def DO_MOVE {}
+  def DO_TURN{}
+  def DO_GAME{}
+  def INIT{
+   var x=new model.heartGame
+  }
+}

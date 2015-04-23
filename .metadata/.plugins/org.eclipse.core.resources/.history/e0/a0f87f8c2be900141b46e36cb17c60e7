@@ -1,0 +1,83 @@
+package myProject
+
+class View {
+ def init(controller:Controller)= ???
+ 
+ def MainMenu{
+  println("Welcome to Hearts!")
+  println("To begin a new game, type 1")
+  println("To show the commands needed to play the game, type 0")
+  state
+ }
+ 
+ 
+  def help{
+    println("GAME METHODS")
+    println("--------------")
+    println("0-> displays methods for the game")
+    println("1-> Shows the playing area")
+    println("2-> Shows the player order")
+    println("3-> Advances the player order")
+    println("4-> Starts a new game")
+    println("5-> Checks for a winner")
+    println("6-> completes a move for the player currently up")
+    println("7-> computes four moves, a complete trick")
+    println("8-> completes a full game and displays the winner")
+    println("9-> exit the game")
+  }
+  
+  def showBoard{
+    
+  }
+  def showQueue{
+    
+  }
+  
+  def showHand(player:Int){
+    
+  }
+  
+  def showScores{
+    
+  }
+}
+
+/*  def SHOW_PLAYING_AREA=game.showBoard
+  def SHOW_PLAYER_ORDER=game.showQueue
+ // def ADVANCE_ORDER=???
+  def WINNER_CHECK=game.scoreBoard.loserCheck
+  def DO_TRICK=game.completeTrick
+  def DO_ROUND=game.completeRound
+  def DO_GAME=game.completeGame
+  def NEW_GAME{
+    println("Game Start")
+    help
+    game=new SimControll
+    * 
+    * 
+    *     println("CURRENT STATUS")
+    println("------------------------")
+    println("Player 1's Hand")
+    for (card <-hand1.cardSet) println((card.rank,card.suit))
+    println("-----")
+    println("Player 2's Hand")
+    for (card <-hand2.cardSet) println((card.rank,card.suit))
+    println("-----")
+    println("Player 3's Hand")
+    for (card <-hand3.cardSet) println((card.rank,card.suit))
+    println("-----")
+    println("Player 4's Hand")
+    for (card <-hand4.cardSet) println((card.rank,card.suit))
+    println("------------------------------------------")
+    println("The current score is:")
+    println("Player 1: "+scoreBoard.scores(0).toString)
+    println("Player 2: "+scoreBoard.scores(1).toString)
+    println("Player 3: "+scoreBoard.scores(2).toString)
+    println("Player 4: "+scoreBoard.scores(3).toString)
+    println("")
+    println("currently on the table:")
+    println("Player 1 has played: "+(playArea.cards(0).rank,playArea.cards(0).suit).toString)
+    println("Player 2 has played: "+(playArea.cards(1).rank,playArea.cards(1).suit).toString)
+    println("Player 3 has played: "+(playArea.cards(2).rank,playArea.cards(2).suit).toString)
+    println("Player 4 has played: "+(playArea.cards(3).rank,playArea.cards(3).suit).toString)
+    */

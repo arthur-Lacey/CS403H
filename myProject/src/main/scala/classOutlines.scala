@@ -1,4 +1,4 @@
-package myProject
+//package myProject
 // things to add: force clubs to be the first lead suit, strategies, GUI
 
 import scala.collection.mutable.Stack

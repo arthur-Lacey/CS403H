@@ -1,0 +1,60 @@
+package myProject
+
+
+
+class View {
+ var controller:Option[Controller]= None
+ def init(ctrl:Controller)= controller=Some(ctrl)
+   
+ 
+ def MainMenu{
+  println("Welcome to Hearts!")
+  println("To begin a restart the game, type 4")
+  println("To show the commands needed to play the game, type 0")
+  println("To exit the game, type 9")
+ }
+ 
+ def error{
+   println("Invalid input, please try again.  If you need help, type 0")
+ }
+ 
+ def winner(winString:String){
+   println(winString)// Find a way to connect what's happening in the control with the view
+   
+ }
+ 
+ def exit{
+   println("Thanks For Playing!")
+ }
+ 
+ 
+  def help{
+    println("GAME METHODS")
+    println("--------------")
+    println("0-> displays methods for the game")
+    println("1-> Shows the playing area")
+    println("2-> Shows the player order")
+    println("3-> Advances the player order")
+    println("4-> Starts a new game")
+    println("5-> Checks for a winner")
+    println("6-> completes a move for the player currently up")
+    println("7-> computes four moves, a complete trick")
+    println("8-> completes a full game and displays the winner")
+    println("9-> exit the game")
+  }
+  
+  def showHands(handString:String){
+    println(handString)
+  }
+    
+  def showScore(scoreString:String){
+    println(scoreString)
+  }
+  def showQueue(queueString:String){
+    println(queueString)
+  }
+  def showPlayArea(playAreaString:String){
+   println(playAreaString) 
+  }
+}
+
