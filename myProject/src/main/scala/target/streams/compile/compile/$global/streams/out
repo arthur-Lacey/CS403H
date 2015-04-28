@@ -2,29 +2,30 @@
 [0m[[0mdebug[0m] [0mInitial source changes: [0m
 [0m[[0mdebug[0m] [0m	removed:Set()[0m
 [0m[[0mdebug[0m] [0m	added: Set()[0m
-[0m[[0mdebug[0m] [0m	modified: Set(C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\Model.scala, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\View.scala, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\Controller.scala)[0m
+[0m[[0mdebug[0m] [0m	modified: Set(C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\View.scala)[0m
 [0m[[0mdebug[0m] [0mRemoved products: Set()[0m
 [0m[[0mdebug[0m] [0mExternal API changes: API Changes: Set()[0m
 [0m[[0mdebug[0m] [0mModified binary dependencies: Set()[0m
-[0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set(C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\Model.scala, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\View.scala, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\Controller.scala)[0m
+[0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set(C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\View.scala)[0m
 [0m[[0mdebug[0m] [0m[0m
 [0m[[0mdebug[0m] [0mSources indirectly invalidated by:[0m
 [0m[[0mdebug[0m] [0m	product: Set()[0m
 [0m[[0mdebug[0m] [0m	binary dep: Set()[0m
 [0m[[0mdebug[0m] [0m	external source: Set()[0m
-[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\Model.scala, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\View.scala, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\Controller.scala)[0m
-[0m[[0minfo[0m] [0mCompiling 3 Scala sources to C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\target\scala-2.10\classes...[0m
+[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\View.scala)[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\target\scala-2.10\classes...[0m
 [0m[[0mdebug[0m] [0mGetting compiler-interface from component compiler for Scala 2.10.4[0m
 [0m[[0mdebug[0m] [0mGetting compiler-interface from component compiler for Scala 2.10.4[0m
-[0m[[0mdebug[0m] [0mRunning cached compiler 45cef, interfacing (CompilerInterface) with Scala compiler version 2.10.4[0m
+[0m[[0mdebug[0m] [0mRunning cached compiler 112754c, interfacing (CompilerInterface) with Scala compiler version 2.10.4[0m
 [0m[[0mdebug[0m] [0mCalling Scala compiler with arguments  (CompilerInterface):[0m
 [0m[[0mdebug[0m] [0m	-bootclasspath[0m
 [0m[[0mdebug[0m] [0m	C:\Program Files\Java\jdk1.8.0_45\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_45\jre\classes;C:\Users\x65977\.sbt\boot\scala-2.10.4\lib\scala-library.jar[0m
 [0m[[0mdebug[0m] [0m	-classpath[0m
 [0m[[0mdebug[0m] [0m	C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\target\scala-2.10\classes[0m
-[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\Controller.scala:8: value heartGame is not a member of myProject.Model[0m
-[0m[[31merror[0m] [0m  val x=model.heartGame[0m
-[0m[[31merror[0m] [0m              ^[0m
-[0m[[31merror[0m] [0mone error found[0m
-[0m[[0mdebug[0m] [0mCompilation failed (CompilerInterface)[0m
-[0m[[31merror[0m] [0m(compile:[31mcompile[0m) Compilation failed[0m
+[0m[[0mdebug[0m] [0mScala compilation took 0.669432918 s[0m
+[0m[[0mdebug[0m] [0mNew invalidations:[0m
+[0m[[0mdebug[0m] [0m	Set()[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set()[0m
+[0m[[0mdebug[0m] [0mPreviously invalidated, but (transitively) depend on new invalidations:[0m
+[0m[[0mdebug[0m] [0m	Set()[0m
+[0m[[0mdebug[0m] [0mAll newly invalidated sources after taking into account (previously) recompiled sources:Set()[0m

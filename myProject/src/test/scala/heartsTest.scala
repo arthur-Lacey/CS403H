@@ -1,19 +1,19 @@
-//package myProject
+package myProject
 
 import org.scalatest.FunSpec
 import org.scalatest.Matchers
 
-class heartsTest extends FunSpec with Matchers {
+class heartsTest(model:Model) extends FunSpec with Matchers {
 
   describe ("a Deck"){
     describe("before a hand"){
       it("has 52 cards"){
-      val deck= new Deck("standard", null)
+      val deck= new model.Deck
       assert (deck.length==52)  
       }
       
       it("has no repeated elements"){
-        val deck= new Deck("standard",null)
+        val deck= new Deck
         var mover=Set[Card]()
         while (!deck.isEmpty) mover+=deck.deal
         assert (mover.size==52)

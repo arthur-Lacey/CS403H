@@ -1,13 +1,11 @@
 package myProject
 
 
-
 class View {
  var controller:Option[Controller]= None
  def init(ctrl:Controller)= {
    var input=0
-   controller=Some(ctrl)//controller.get
-   MainMenu
+   controller=Some(ctrl)
    while(input!=9) {
     if (input==0) help
     else if (input==1) controller.get.SHOW_PLAYING_AREA
@@ -18,12 +16,12 @@ class View {
     else if (input==6) controller.get.DO_MOVE
     else if (input==7) controller.get.DO_TURN
     else if (input==8) controller.get.DO_GAME
-    else error
+    else println("invalid input")
     input=readInt()
  }
  } 
  
- def MainMenu{
+  def MainMenu{
   println("Welcome to Hearts!")
   println("To begin a restart the game, type 4")
   println("To show the commands needed to play the game, type 0")
@@ -35,10 +33,6 @@ class View {
    println("Invalid input, please try again.  If you need help, type 0")
  }
  
- def winner(winString:String){
-   println(winString)// Find a way to connect what's happening in the control with the view
-   
- }
  
  def newGame{
    println("New Game Started")
@@ -66,18 +60,9 @@ class View {
     println("")
   }
   
-  def showHands(handString:String){
-    println(handString)
+  def displayThis(input:String){
+    println(input)
   }
-    
-  def showScore(scoreString:String){
-    println(scoreString)
-  }
-  def showQueue(queueString:String){
-    println(queueString)
-  }
-  def showPlayArea(playAreaString:String){
-   println(playAreaString) 
-  }
+
 }
 

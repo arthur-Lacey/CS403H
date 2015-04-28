@@ -16,7 +16,11 @@ class Card (val rank: Int, val suit: String){
   def isSpade:Boolean=(suit=="Spade")
   def isDiamond:Boolean=(suit=="Diamond")
   def isHigher(compare:Card):Boolean=(rank>compare.rank)
-}
+  def equals(compare: Card): Boolean={
+    if (this.rank==compare.rank&&this.suit==compare.suit) true
+    else false
+  }
+  }
 
 class Deck{
   private val validSuits:Array[String]=Array("Heart","Club","Spade","Diamond")
@@ -42,22 +46,26 @@ class Deck{
 
 class Hand (val seat:Int){
   var cardSet= Set[Card]()
-  def init{
-    cardSet=Set[Card]()
-  }
+  def init= cardSet=Set[Card]()
   private val nullCard=new Card(-1,null)
   def showCards= println(cardSet)
+  def hasTwoClubs:Boolean={
+    val twoClub=new Card (2, "Club")
+    var flag=false
+    for (card<-cardSet) if (card.equals(twoClub)) flag=true
+    flag
+  }
   def draw(deck: Deck)={
     if (deck.isEmpty) this.cardSet
     else{
       for (index<- 0 to 12) cardSet=cardSet+deck.deal
     }
   }
- def play(dsuit:String):Card= {// add a parameter that checks for a particular suit, and allow an any command that allows any card to be played
+ def play(dsuit:String):Card= {//will have to adjust for strategy
      var x=nullCard
      if (dsuit!="Any"){
-       val iter = cardSet.filter(_.suit==dsuit)
-       if (iter.size==0) play("Any")
+       val iter = cardSet.filter(_.suit==dsuit)      
+       if (iter.isEmpty) play("Any")
        else {
         x= iter.head
         cardSet=cardSet-x
@@ -73,8 +81,9 @@ class Hand (val seat:Int){
 }
 
 class PlayArea{
+  private val nullCard=new Card(-1,null)
   var lead="Any"//figure out how you want to calculate the lead
-  val cards= Array.ofDim[Card](4)
+  val cards= Array.fill[Card](4)(nullCard)
   def max: Int= {
     var ind= -1
     var best=0
@@ -134,12 +143,17 @@ class TurnQueue extends Queue[Int]{
      this.enqueue((first+1)%4)
      this.enqueue((first+2)%4)
      this.enqueue((first+3)%4)
-     println(this)
    }
    def next= this.head
+   def empty ={
+     while(!this.isEmpty){
+       this.dequeue
+     }
+     this
+   }
 }
 
-class heartGame {
+
   
   val deck=new Deck
   val scoreBoard = new Scoreboard
@@ -153,6 +167,7 @@ class heartGame {
   var round=0
   var trick=0
   var lastHandWentTo= -1
+  var flag= false
   
   def init{
     scoreBoard.init
@@ -160,12 +175,14 @@ class heartGame {
     hand1.init
     hand2.init
     hand3.init
+    queue.empty
     round=0
     trick=0
+    flag= false
     lastHandWentTo= -1
   }
   
-  def newRound{
+  def newHand{
     deck.init
     deck.shuffle
     hand0.draw(deck)
@@ -176,30 +193,18 @@ class heartGame {
     handArray(1)=hand1
     handArray(2)=hand2
     handArray(3)=hand3
-    trick=0
-    round+=1 
-    println("Player 1's Hand")
-    for (card <-hand0.cardSet) println((card.rank,card.suit))
-    println("-----")
-    println("Player 2's Hand")
-    for (card <-hand1.cardSet) println((card.rank,card.suit))
-    println("-----")
-    println("Player 3's Hand")
-    for (card <-hand2.cardSet) println((card.rank,card.suit))
-    println("-----")
-    println("Player 4's Hand")
-    for (card <-hand3.cardSet) println((card.rank,card.suit))
-    println("-----")
+    trick=0 
+    round=0
+    
   }
   
   
   
   def loadQueue={
-    val twoClub= new Card(2,"Club")
-    if (round<=1){
-      if (hand1.cardSet.contains(twoClub)) queue.load(0)
-      else if (hand2.cardSet.contains(twoClub)) queue.load(1)
-      else if (hand3.cardSet.contains(twoClub)) queue.load(2)
+    if (trick<=0){
+      if (hand0.hasTwoClubs) queue.load(0)
+      else if (hand1.hasTwoClubs) queue.load(1)
+      else if (hand2.hasTwoClubs) queue.load(2)
       else queue.load(3)
     }
     else queue.load(lastHandWentTo)
@@ -218,20 +223,25 @@ class heartGame {
     trick+=1
   } 
   
-  def doTrick{// need to figure out how best to determine if a lead suit needs to be picked
-    if (trick==0){
-      loadQueue
-      playArea=new PlayArea
-      doFirstTurn(queue.dequeue,playArea)
+  def doTrick{
+    if (scoreBoard.loserCheck) flag=scoreBoard.loserCheck
+    else if (round>=13) newHand
+    if (flag==false){
+      if (trick==0){
+        playArea=new PlayArea
+        doFirstTurn(queue.dequeue,playArea)
+      }
+      else doRegularTurn(queue.dequeue,playArea)
+      if (trick>3) {
+        val score=playArea.calculateScore
+        scoreBoard.addScore(playArea.max,score)
+        lastHandWentTo=playArea.max
+        loadQueue
+        trick=0
+        round+=1
+      }
     }
-    else doRegularTurn(queue.dequeue,playArea)
-    if (trick==3) {
-      val score=playArea.calculateScore
-      scoreBoard.addScore(playArea.max,score)
-      lastHandWentTo=playArea.max
-      trick=0
-    }
-  }
+   }
   def completeTrick{
     doTrick
     doTrick
@@ -239,5 +249,5 @@ class heartGame {
     doTrick
   }
   
-  }
+
 }
