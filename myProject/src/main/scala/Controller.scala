@@ -6,17 +6,13 @@ import scala.util.Random
 
 class Controller(view:View,model:Model) {
   def SHOW_PLAYING_AREA{
-    view.displayThis("Player 0's Hand")
-    for (card <-model.hand0.cardSet) view.displayThis((card.rank,card.suit).toString)
+    model.hand0.showHand
     view.displayThis("-----")
-    view.displayThis("Player 1's Hand")
-    for (card <-model.hand1.cardSet) view.displayThis((card.rank,card.suit).toString)
+    model.hand1.showHand
     view.displayThis("-----")
-    view.displayThis("Player 2's Hand")
-    for (card <-model.hand2.cardSet) view.displayThis((card.rank,card.suit).toString)
+    model.hand2.showHand
     view.displayThis("-----")
-    view.displayThis("Player 3's Hand")
-    for (card <-model.hand3.cardSet) view.displayThis((card.rank,card.suit).toString)
+    model.hand3.showHand
     view.displayThis("-----")
     SHOW_PLAYER_ORDER
     view.displayThis("-----")
