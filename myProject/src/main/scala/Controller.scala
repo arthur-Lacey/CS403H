@@ -6,14 +6,15 @@ import scala.util.Random
 
 class Controller(view:View,model:Model) {
   def SHOW_PLAYING_AREA{
-    model.hand0.showHand
-    view.displayThis("-----")
-    model.hand1.showHand
-    view.displayThis("-----")
-    model.hand2.showHand
-    view.displayThis("-----")
-    model.hand3.showHand
-    view.displayThis("-----")
+   //////////////////copy 
+    view.showHand0(model.hand0.showHand)
+    
+    view.showHand1(model.hand1.showHand)
+    
+    view.showHand2(model.hand2.showHand)
+    
+    view.showHand3(model.hand3.showHand)
+  /////////////////////end copy  
     SHOW_PLAYER_ORDER
     view.displayThis("-----")
     view.displayThis("The Table:")
@@ -28,11 +29,15 @@ class Controller(view:View,model:Model) {
     view.displayThis("Player 2: "+model.scoreBoard.scores(2).toString)
     view.displayThis("Player 3: "+model.scoreBoard.scores(3).toString)
   }
+  
   def SHOW_PLAYER_ORDER{
     var queueString="The player order is: "
     for (y<-model.queue) queueString+=(y+", ")
-    view.displayThis(queueString)
-    }
+    queueString=queueString.substring(0,queueString.length-2)
+    ////////copy
+    view.showOrder(queueString)
+  }
+  
   def ADVANCE_ORDER{
     var temp= model.queue.dequeue
     model.queue.enqueue(temp)
@@ -74,17 +79,7 @@ class Controller(view:View,model:Model) {
     model.newHand
     model.loadQueue
     view.displayThis("New Game Initialized")
+    view.refresh()
 
-  }
-  
-  def SET_STRATEGY(seat:Int, strat:Int){
-    model.handArray(seat).strategy=strat  
-    view.displayThis("player "+seat.toString+"'s strategy is ")
-    view.displayThis(strat.toString)
-  }
-  
-  def VIEW_STRATEGY(seat:Int){
-    model.handArray(seat).strategy
-    
   }
 }

@@ -6,6 +6,12 @@ class View {
  def init(ctrl:Controller)= {
    var input=0
    controller=Some(ctrl)
+   
+   
+   
+   //////////////copy just this line
+   controller.get.INIT
+   
    while(input!=9) {
     if (input==0) help
     else if (input==1) controller.get.SHOW_PLAYING_AREA
@@ -18,12 +24,12 @@ class View {
     else if (input==8) controller.get.DO_GAME
     else println("invalid input")
     input=readInt()
- }
+   }
  } 
  
   def MainMenu{
   println("Welcome to Hearts!")
-  println("To begin a restart the game, type 4")
+  println("To begin or restart the game, type 4")
   println("To show the commands needed to play the game, type 0")
   println("To exit the game, type 9")
   println("")
@@ -63,7 +69,20 @@ class View {
   def displayThis(input:String){
     println(input)
   }
-
+  
+  /////////////////copy all these
+  
+  def showOrder(s:String)=println(s)
+  
+  def showHand0(s:String)=println(s)
+  
+  def showHand1(s:String)=println(s)
+  
+  def showHand2(s:String)=println(s)
+  
+  def showHand3(s:String)=println(s)
+  
+  def refresh()=println("REFRESH YOSELF")
 }
 
 
