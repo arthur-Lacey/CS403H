@@ -66,19 +66,37 @@ class Hand (val seat:Int, var strategy: Int){
   
 
   def showHand={
-  println("Player "+seat.toString+" has:")
-  var heartString=""
-  for(x<-heartList) heartString+=x.rank.toString+" "
-  println("Hearts: "+heartString)
-  var spadeString=""
-  for(x<-spadeList) spadeString+=x.rank.toString+" "
-  println("Spades: "+spadeString)
-  var clubString=""
-  for(x<-clubList) clubString+=x.rank.toString+" "
-  println("Clubs: "+clubString)
-  var diamondString=""
-  for(x<-diamondList) diamondString+=x.rank.toString+" "
-  println("Diamonds: "+diamondString)
+    println("Player "+seat.toString+" has:")//seat refers to the player number
+      
+    var heartString=""
+    for(x<-heartList){
+      heartString+=x.rank.toString+"H "
+      if(heartString.length%4==3) heartString+= " "
+    } 
+    println("Hearts: "+heartString)
+      
+    var spadeString=""
+    for(x<-spadeList) {
+      spadeString+=x.rank.toString+"S "
+      if(spadeString.length % 4 == 3) spadeString+=" "
+    }
+    println("Spades: "+spadeString)
+    
+    var clubString=""
+    for(x<-clubList){
+      clubString+=x.rank.toString+"C "
+      if(clubString.length%4==3) clubString+=" "
+    } 
+    println("Clubs: "+clubString)
+    
+    var diamondString=""
+    for(x<-diamondList) {
+      diamondString+=x.rank.toString+"D "
+      if(diamondString.length%4==3) diamondString+=" "
+    }
+    println("Diamonds: "+diamondString)
+      
+    heartString+spadeString+clubString+diamondString  
   }
  
   def handSort(lis:List[Card]):List[Card]={

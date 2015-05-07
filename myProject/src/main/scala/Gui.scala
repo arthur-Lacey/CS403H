@@ -206,6 +206,8 @@ object Gui extends View{
     Frame.visible=true
   //}
   
+    
+  /*
   def card0Update(s:String)={
     gui.cardArea.p1Card.text_=(s)
   }
@@ -222,7 +224,7 @@ object Gui extends View{
   def card3Update(s:String)={
     gui.cardArea.p4Card.text_=(s)
   }
-    
+  */
     
     
     
@@ -234,29 +236,53 @@ object Gui extends View{
     
   override def showHand0(s:String)={  //shows player 1's hand
     println(s)
-    for(i<-0 until gui.playArea.hand0.getCards.length){
+    for(i<-0 until s.length/4){
       gui.playArea.hand0.getCards()(i).text_=(s.substring(i*4,i*4+4))
+    }
+    
+    if(s.length/4<13){
+      for(i <- s.length/4 until 13){
+        gui.playArea.hand0.getCards()(i).text_=(" ")
+      }
     }
   }
   
   override def showHand1(s:String)={   //shows player 2's hand
-    println(s)
-    for(i<-0 until gui.playArea.hand1.getCards.length){
+    //println(s)
+    for(i<-0 until s.length/4){
       gui.playArea.hand1.getCards()(i).text_=(s.substring(i*4,i*4+4))
+    }
+    
+    if(s.length/4<13){
+      for(i <- s.length/4 until 13){
+        gui.playArea.hand1.getCards()(i).text_=(" ")
+      }
     }
   }
   
   override def showHand2(s:String)={   //shows player 3's hand
     println(s)
-    for(i<-0 until gui.playArea.hand2.getCards.length){
+    for(i<-0 until s.length/4){
       gui.playArea.hand2.getCards()(i).text_=(s.substring(i*4,i*4+4))
+    }
+    
+    if(s.length/4<13){
+      for(i <- s.length/4 until 13){
+        gui.playArea.hand2.getCards()(i).text_=(" ")
+      }
     }
   }
   
   override def showHand3(s:String)={   //shows player 4's hand
     println(s)
-    for(i<-0 until gui.playArea.hand3.getCards.length){
+    for(i<-0 until s.length/4){
       gui.playArea.hand3.getCards()(i).text_=(s.substring(i*4,i*4+4))
+    }
+    
+    if(s.length/4<13){
+      for(i <- s.length/4 until 13){
+        gui.playArea.hand3.getCards()(i).text_=(" ")
+      }
     }
   }
   
