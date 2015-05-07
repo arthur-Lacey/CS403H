@@ -1,0 +1,478 @@
+package myProject
+
+import scala.collection.mutable.Stack
+import scala.collection.mutable.Queue
+import scala.util.Random
+
+class Model {
+  
+  
+class Card (val rank: Int, val suit: String){
+  private val validSuits:Array[String]=Array("Heart","Club","Spade","Diamond")
+  private val validRanks:Array[Int]=Array(2,3,4,5,6,7,8,9,10,11,12,13,14)
+  def isValid:Boolean=validSuits.contains(suit)&&validRanks.contains(rank)
+  def isHeart:Boolean= (suit=="Heart")
+  def isClub:Boolean= (suit=="Club")
+  def isSpade:Boolean=(suit=="Spade")
+  def isDiamond:Boolean=(suit=="Diamond")
+  def isHigher(compare:Card):Boolean=(rank>compare.rank)
+  def equals(compare: Card): Boolean={
+    if (this.rank==compare.rank&&this.suit==compare.suit) true
+    else false
+  }
+  }
+
+class Deck{
+  private val validSuits:Array[String]=Array("Heart","Club","Spade","Diamond")
+  private val validRanks:Array[Int]=Array(2,3,4,5,6,7,8,9,10,11,12,13,14)
+  var cards= new Stack[Card]
+  def init{
+    for (suit<-validSuits){
+      for(rank<-validRanks){
+        var newCard=new Card(rank,suit)
+        cards.push(newCard)
+      }
+    }
+  }
+  def showContents= cards
+  def isEmpty= cards.isEmpty
+  def topCard= cards.head
+  def deal= cards.pop()
+  def length=cards.length
+  def shuffle={
+    cards=Random.shuffle(cards)
+  }
+}
+
+class Hand (val seat:Int, var strategy: Int){
+  //Storage Units
+  // Index 0 controlls the suit.  0 is always hearts, 1 is always spades, 2 is always clubs, 3 is always diamonds, 4 
+  var heartList=List[Card]()
+  var spadeList=List[Card]()
+  var clubList=List[Card]()
+  var diamondList=List[Card]()
+  var cardArray=Array(heartList,spadeList,clubList,diamondList)
+  private val nullCard = new Card(-1,null)
+
+  
+  //Functions
+  def init= {
+    heartList=List[Card]()
+  spadeList=List[Card]()
+  clubList=List[Card]()
+  diamondList=List[Card]()
+  }
+  
+  
+
+  def showHand={
+  println("Player "+seat.toString+" has:")
+  var heartString=""
+  for(x<-heartList) heartString+=x.rank.toString+" "
+  println("Hearts: "+heartString)
+  var spadeString=""
+  for(x<-spadeList) spadeString+=x.rank.toString+" "
+  println("Spades: "+spadeString)
+  var clubString=""
+  for(x<-clubList) clubString+=x.rank.toString+" "
+  println("Clubs: "+clubString)
+  var diamondString=""
+  for(x<-diamondList) diamondString+=x.rank.toString+" "
+  println("Diamonds: "+diamondString)
+  }
+ 
+  def handSort(lis:List[Card]):List[Card]={
+  var tempList=lis
+  var newList=List[Card]()
+  def helper(lx:List[Card]):List[Card]={
+    var high=nullCard
+    if (lx.length<=0) newList
+    else{
+      for (x <- lx) if (x.isHigher(high)) high=x
+      newList=high+:newList
+      tempList=tempList.filterNot(_==high)//((_.rank==high.rank)&&(_.suit==high.suit))
+      helper(tempList)
+      }
+    }
+  helper(tempList)
+  }
+
+ 
+  
+  def hasTwoClubs:Boolean={
+    val twoClub=new Card (2, "Club")
+    var flag=false
+    for (card<-clubList) if (card.rank==2) flag=true
+    flag
+  }
+  
+  
+  def draw(deck: Deck)={//draw from the deck and sort each array
+    if (deck.isEmpty) this.cardArray
+    else{
+      for (index<- 0 to 12){
+    var tempCard=deck.deal
+    if (tempCard.isHeart) heartList=tempCard+:heartList
+    else if(tempCard.isSpade) spadeList=tempCard+:spadeList
+    else if (tempCard.isClub) clubList=tempCard+:clubList
+    else diamondList=tempCard+:diamondList
+    }
+  heartList=handSort(heartList)
+  spadeList=handSort(spadeList)
+  clubList=handSort(clubList)
+  diamondList=handSort(diamondList)
+  
+  }
+  }
+  
+ // play is the mechanism by which you take a specific card out
+ 
+ // cond array (beginning of round?, lead suit, suit preference, high low)
+ 
+ def play(lead:String, strategy:Int):Card= (lead,strategy) match {
+   case ("Any",0) =>{
+    if (heartList.isEmpty) play("Any",1)
+    else{
+      val tempCard = heartList.head
+      heartList= heartList.tail
+      tempCard
+    }
+   }
+   case ("Any",1) =>{
+    if (spadeList.isEmpty) play("Any",2)
+    else{
+      val tempCard = spadeList.head
+      spadeList= spadeList.tail
+      tempCard
+    }
+   }
+   case ("Any",2) =>{
+    if (clubList.isEmpty) play("Any",3)
+    else{
+      val tempCard = clubList.head
+      clubList= clubList.tail
+      tempCard
+    }
+   }
+   case ("Any",3) =>{
+    if (diamondList.isEmpty) play("Any",0)
+    else{
+      val tempCard = diamondList.head
+      diamondList= diamondList.tail
+      tempCard
+    }
+   }
+   case ("Heart",0) =>{
+    if (heartList.isEmpty) play("Any",1)
+    else{
+      val tempCard = heartList.head
+      heartList= heartList.tail
+      tempCard
+    }
+   }
+   case ("Heart",1) =>{
+    if (heartList.isEmpty) play("Any",1)
+    else{
+      val tempCard = heartList.head
+      heartList= heartList.tail
+      tempCard
+    }
+   }
+   case ("Heart",2) =>{
+    if (heartList.isEmpty) play("Any",2)
+    else{
+      val tempCard = heartList.head
+      heartList= heartList.tail
+      tempCard
+    }
+   }
+   case ("Heart",3) =>{
+    if (heartList.isEmpty) play("Any",3)
+    else{
+      val tempCard = heartList.head
+      heartList= heartList.tail
+      tempCard
+    }
+   }
+   case ("Spade",0) =>{
+    if (spadeList.isEmpty) play("Any",0)
+    else{
+      val tempCard = spadeList.head
+      spadeList= spadeList.tail
+      tempCard
+    }
+   }
+   case ("Spade",1) =>{
+    if (spadeList.isEmpty) play("Any",2)
+    else{
+      val tempCard = spadeList.head
+      spadeList= spadeList.tail
+      tempCard
+    }
+   }
+   case ("Spade",2) =>{
+    if (spadeList.isEmpty) play("Any",2)
+    else{
+      val tempCard = spadeList.head
+      spadeList= spadeList.tail
+      tempCard
+    }
+   }
+   case ("Spade",3) =>{
+    if (spadeList.isEmpty) play("Any",3)
+    else{
+      val tempCard = spadeList.head
+      spadeList= spadeList.tail
+      tempCard
+    }
+   }
+   case ("Club",0) =>{
+    if (clubList.isEmpty) play("Any",0)
+    else{
+      val tempCard = clubList.head
+      clubList= spadeList.tail
+      tempCard
+    }
+   }
+   case ("Club",1) =>{
+    if (clubList.isEmpty) play("Any",1)
+    else{
+      val tempCard = clubList.head
+      clubList= clubList.tail
+      tempCard
+    }
+   }
+   case ("Club",2) =>{
+    if (clubList.isEmpty) play("Any",3)
+    else{
+      val tempCard = clubList.head
+      clubList= clubList.tail
+      tempCard
+    }
+   }
+   case ("Club",3) =>{
+    if (clubList.isEmpty) play("Any",3)
+    else{
+      val tempCard = clubList.head
+      clubList= clubList.tail
+      tempCard
+    }
+   }
+   case ("Diamond",0) =>{
+    if (diamondList.isEmpty) play("Any",0)
+    else{
+      val tempCard = diamondList.head
+      diamondList= diamondList.tail
+      tempCard
+    }
+   }
+   case ("Diamond",1) =>{
+    if (diamondList.isEmpty) play("Any",1)
+    else{
+      val tempCard = diamondList.head
+      diamondList= diamondList.tail
+      tempCard
+    }
+   }
+   case ("Diamond",2) =>{
+    if (diamondList.isEmpty) play("Any",2)
+    else{
+      val tempCard = diamondList.head
+      diamondList= diamondList.tail
+      tempCard
+    }
+   }
+   case ("Diamond",3) =>{
+    if (diamondList.isEmpty) play("Any",0)
+    else{
+      val tempCard = diamondList.head
+      diamondList= diamondList.tail
+      tempCard
+    }
+   }
+   case ("NewRound",_) =>{
+    val tempCard = clubList.head
+    clubList= clubList.tail
+    tempCard
+    }
+  }
+}
+
+class PlayArea{
+  private val nullCard=new Card(-1,null)
+  var lead="Any"//figure out how you want to calculate the lead
+  val cards= Array.fill[Card](4)(nullCard)
+  def max: Int= {
+    var ind= -1
+    var best=0
+    for (x <- 0 to 3){
+      if ((cards(x).suit==lead)&&(cards(x).rank>best)) {
+        ind=x
+        best=cards(x).rank
+      }
+    }
+    ind
+  }
+  def assignCard(seat:Int,card:Card)={
+    cards(seat)=card
+  }
+  def calculateScore={
+    var score=0
+    for (x <- 0 to 3){
+      if (cards(x).isHeart) score+=1
+      if (cards(x).rank==12 && cards(x).suit=="Spade") score+=13
+    }  
+    score
+  }
+}
+
+class Scoreboard{
+  val scores= Array.ofDim[Int](4)
+  def init = {
+    for (x<-0 to 3) scores(x)=0
+  }
+  def addScore(seat:Int, score:Int)={
+    scores(seat)+=score
+  }
+  def loserCheck={
+    var flag=false
+    for (s <- scores){
+      if (s>=100) flag=true
+    }
+    flag
+  }
+  def winner={
+    var best= Int.MaxValue
+    var ind= -1
+    for (x<-0 to 3){
+      if (scores(x)<best){
+        best=scores(x)
+        ind=x
+      }
+    }
+    ind
+  }
+
+}
+
+class TurnQueue extends Queue[Int]{
+   def load(first:Int)={
+     this.enqueue(first)
+     this.enqueue((first+1)%4)
+     this.enqueue((first+2)%4)
+     this.enqueue((first+3)%4)
+   }
+   def next= this.head
+   def empty ={
+     while(!this.isEmpty){
+       this.dequeue
+     }
+     this
+   }
+}
+
+
+  
+  val deck=new Deck
+  val scoreBoard = new Scoreboard
+  val hand0= new Hand(0,1)
+  val hand1= new Hand(1,1)
+  val hand2= new Hand(2,1)
+  val hand3= new Hand(3,1)
+  var handArray=Array.ofDim[Hand](4)
+  var playArea=new PlayArea
+  val queue= new TurnQueue
+  var round=0
+  var trick=0
+  var lastHandWentTo= -1
+  var flag= false
+  
+  def init{
+    scoreBoard.init
+    hand0.init
+    hand1.init
+    hand2.init
+    hand3.init
+    queue.empty
+    round=0
+    trick=0
+    flag= false
+    lastHandWentTo= -1
+  }
+  
+  def newHand{
+    deck.init
+    deck.shuffle
+    hand0.draw(deck)
+    hand1.draw(deck)
+    hand2.draw(deck)
+    hand3.draw(deck)
+    handArray(0)=hand0
+    handArray(1)=hand1
+    handArray(2)=hand2
+    handArray(3)=hand3
+    trick=0 
+    round=0
+    
+  }
+  
+  
+  
+  def loadQueue={
+    if (trick<=0){
+      if (hand0.hasTwoClubs) queue.load(0)
+      else if (hand1.hasTwoClubs) queue.load(1)
+      else if (hand2.hasTwoClubs) queue.load(2)
+      else queue.load(3)
+    }
+    else queue.load(lastHandWentTo)
+  }
+  
+  def doFirstTurn(seat:Int, playArea:PlayArea){
+    val playedCard=handArray(seat).play(playArea.lead,handArray(seat).strategy)
+    playArea.lead=playedCard.suit
+    playArea.assignCard(seat,playedCard)
+    trick+=1
+  }
+  
+  def doRegularTurn(seat:Int,playArea:PlayArea){
+    val playedCard=handArray(seat).play(playArea.lead,handArray(seat).strategy)
+    playArea.assignCard(seat,playedCard)
+    trick+=1
+  } 
+  
+  def doTrick{
+    if (flag==false){
+      if (trick==0){
+        playArea=new PlayArea
+        if (round==0) playArea.lead="NewRound"
+        doFirstTurn(queue.dequeue,playArea)
+      }
+      else doRegularTurn(queue.dequeue,playArea)
+      if (trick>3) {
+        val score=playArea.calculateScore
+        scoreBoard.addScore(playArea.max,score)
+        trick=0
+        round+=1
+        if (round>=13) {
+          lastHandWentTo= -1
+          flag=scoreBoard.loserCheck
+          newHand
+        }
+        else {
+          lastHandWentTo=playArea.max
+          loadQueue
+        }
+         //Need to edit to ensure that a new round is based on 2 clubs, not last Hand went To
+      }
+    }
+   }
+  def completeTrick{
+    doTrick
+    doTrick
+    doTrick
+    doTrick
+  }
+  
+
+}

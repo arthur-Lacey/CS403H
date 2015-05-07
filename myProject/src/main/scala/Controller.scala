@@ -76,4 +76,15 @@ class Controller(view:View,model:Model) {
     view.displayThis("New Game Initialized")
 
   }
+  
+  def SET_STRATEGY(seat:Int, strat:Int){
+    model.handArray(seat).strategy=strat  
+    view.displayThis("player "+seat.toString+"'s strategy is ")
+    view.displayThis(strat.toString)
+  }
+  
+  def VIEW_STRATEGY(seat:Int){
+    model.handArray(seat).strategy
+    
+  }
 }

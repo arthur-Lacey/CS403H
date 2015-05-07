@@ -419,7 +419,7 @@ class TurnQueue extends Queue[Int]{
   
   
   def loadQueue={
-    if (trick<=0){
+    if (round<=0){
       if (hand0.hasTwoClubs) queue.load(0)
       else if (hand1.hasTwoClubs) queue.load(1)
       else if (hand2.hasTwoClubs) queue.load(2)
@@ -442,26 +442,34 @@ class TurnQueue extends Queue[Int]{
   } 
   
   def doTrick{
-    if (round>=13) {
-      if (scoreBoard.loserCheck) flag=scoreBoard.loserCheck
-      else newHand 
-    }
     if (flag==false){
+      
       if (trick==0){
         playArea=new PlayArea
         if (round==0) playArea.lead="NewRound"
         doFirstTurn(queue.dequeue,playArea)
       }
       else doRegularTurn(queue.dequeue,playArea)
+      
       if (trick>3) {
         val score=playArea.calculateScore
         scoreBoard.addScore(playArea.max,score)
-        lastHandWentTo=playArea.max
-        loadQueue
         trick=0
-        round+=1
+        round+=1      
+        
+        if (round>=13) {
+          lastHandWentTo= -1
+          flag=scoreBoard.loserCheck
+          newHand
+          loadQueue
+        }
+        else {
+          lastHandWentTo=playArea.max
+          loadQueue
+        }
       }
-    }
+         //Need to edit to ensure that a new round is based on 2 clubs, not last Hand went To
+      }
    }
   def completeTrick{
     doTrick

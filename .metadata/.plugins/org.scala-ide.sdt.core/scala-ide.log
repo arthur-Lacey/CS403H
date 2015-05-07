@@ -12222,3 +12222,71 @@ java.lang.NullPointerException
 2015-05-06 01:38:46,113  WARN [Worker-166] - ScalaProject - Project myProject runs on platform default installation.
 2015-05-06 01:39:53,124  WARN [Worker-168] - ScalaProject - Project myProject has platform default sourceLevel.
 2015-05-06 01:39:53,124  WARN [Worker-168] - ScalaProject - Project myProject runs on platform default installation.
+2015-05-06 02:10:55,631  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2015-05-06 02:10:59,361  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2015-05-06 02:11:14,461  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2015-05-06 02:11:23,956  WARN [Worker-177] - ScalaProject - Project myProject has platform default sourceLevel.
+2015-05-06 02:11:23,956  WARN [Worker-177] - ScalaProject - Project myProject runs on platform default installation.
+2015-05-06 02:21:27,293  WARN [Worker-178] - ScalaProject - Project myProject has platform default sourceLevel.
+2015-05-06 02:21:27,293  WARN [Worker-178] - ScalaProject - Project myProject runs on platform default installation.
+2015-05-06 22:21:14,623  WARN [Worker-7] - ScalaProject - Project myProject has platform default sourceLevel.
+2015-05-06 22:21:14,639  WARN [Worker-7] - ScalaProject - Project myProject runs on platform default installation.
+2015-05-06 22:35:08,763  WARN [Worker-10] - ScalaProject - Project myProject has platform default sourceLevel.
+2015-05-06 22:35:08,764  WARN [Worker-10] - ScalaProject - Project myProject runs on platform default installation.
+2015-05-06 22:38:08,451  WARN [Worker-8] - ScalaProject - Project myProject has platform default sourceLevel.
+2015-05-06 22:38:08,451  WARN [Worker-8] - ScalaProject - Project myProject runs on platform default installation.
+2015-05-06 22:38:52,609  WARN [Worker-1] - ScalaProject - Project myProject has platform default sourceLevel.
+2015-05-06 22:38:52,609  WARN [Worker-1] - ScalaProject - Project myProject runs on platform default installation.
+2015-05-06 22:38:57,991  WARN [Worker-2] - ScalaProject - Project myProject has platform default sourceLevel.
+2015-05-06 22:38:57,991  WARN [Worker-2] - ScalaProject - Project myProject runs on platform default installation.
+2015-05-06 22:39:22,395  WARN [Worker-2] - ScalaProject - Project myProject has platform default sourceLevel.
+2015-05-06 22:39:22,395  WARN [Worker-2] - ScalaProject - Project myProject runs on platform default installation.
+2015-05-06 22:39:36,576  WARN [Worker-10] - ScalaProject - Project myProject has platform default sourceLevel.
+2015-05-06 22:39:36,576  WARN [Worker-10] - ScalaProject - Project myProject runs on platform default installation.
+2015-05-06 22:44:35,650  WARN [Worker-17] - ScalaProject - Project myProject has platform default sourceLevel.
+2015-05-06 22:44:35,650  WARN [Worker-17] - ScalaProject - Project myProject runs on platform default installation.
+2015-05-06 22:45:35,608  WARN [Worker-10] - ScalaProject - Project myProject has platform default sourceLevel.
+2015-05-06 22:45:35,608  WARN [Worker-10] - ScalaProject - Project myProject runs on platform default installation.
+2015-05-06 22:58:04,516 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2015-05-06 22:58:04,532 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2015-05-06 22:58:34,132  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2015-05-06 22:59:10,018  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2015-05-06 22:59:35,268  WARN [Worker-6] - ScalaProject - Project myProject has platform default sourceLevel.
+2015-05-06 22:59:35,268  WARN [Worker-6] - ScalaProject - Project myProject runs on platform default installation.
+2015-05-06 23:01:38,245  WARN [Worker-6] - ScalaProject - Project myProject has platform default sourceLevel.
+2015-05-06 23:01:38,245  WARN [Worker-6] - ScalaProject - Project myProject runs on platform default installation.
+2015-05-06 23:04:03,510  WARN [Worker-15] - ScalaProject - Project myProject has platform default sourceLevel.
+2015-05-06 23:04:03,510  WARN [Worker-15] - ScalaProject - Project myProject runs on platform default installation.
+2015-05-06 23:05:56,151  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2015-05-06 23:05:58,729  WARN [Worker-20] - ScalaProject - Project myProject has platform default sourceLevel.
+2015-05-06 23:05:58,729  WARN [Worker-20] - ScalaProject - Project myProject runs on platform default installation.
+2015-05-06 23:13:07,502  WARN [Worker-19] - ScalaProject - Project myProject has platform default sourceLevel.
+2015-05-06 23:13:07,502  WARN [Worker-19] - ScalaProject - Project myProject runs on platform default installation.
+2015-05-07 06:28:29,291  WARN [Worker-1] - ScalaProject - Project Lesson_Files has platform default sourceLevel.
+2015-05-07 06:28:29,307  WARN [Worker-1] - ScalaProject - Project Lesson_Files runs on platform default installation.
+2015-05-07 06:28:32,776  WARN [Worker-4] - ScalaProject - Project myProject has platform default sourceLevel.
+2015-05-07 06:28:32,776  WARN [Worker-4] - ScalaProject - Project myProject runs on platform default installation.
+2015-05-07 06:40:17,127  WARN [Worker-7] - ScalaProject - Project myProject has platform default sourceLevel.
+2015-05-07 06:40:17,127  WARN [Worker-7] - ScalaProject - Project myProject runs on platform default installation.
+2015-05-07 06:42:30,461  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2015-05-07 06:42:33,473  WARN [Worker-1] - ScalaProject - Project myProject has platform default sourceLevel.
+2015-05-07 06:42:33,473  WARN [Worker-1] - ScalaProject - Project myProject runs on platform default installation.
+2015-05-07 06:57:22,122  WARN [Worker-1] - ScalaProject - Project myProject has platform default sourceLevel.
+2015-05-07 06:57:22,122  WARN [Worker-1] - ScalaProject - Project myProject runs on platform default installation.
+2015-05-07 06:59:50,484  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2015-05-07 06:59:55,944  WARN [Worker-3] - ScalaProject - Project myProject has platform default sourceLevel.
+2015-05-07 06:59:55,944  WARN [Worker-3] - ScalaProject - Project myProject runs on platform default installation.
+2015-05-07 07:01:13,833  WARN [Worker-1] - ScalaProject - Project myProject has platform default sourceLevel.
+2015-05-07 07:01:13,833  WARN [Worker-1] - ScalaProject - Project myProject runs on platform default installation.
+2015-05-07 07:02:05,904  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2015-05-07 07:02:24,281  WARN [Worker-13] - ScalaProject - Project myProject has platform default sourceLevel.
+2015-05-07 07:02:24,281  WARN [Worker-13] - ScalaProject - Project myProject runs on platform default installation.
+2015-05-07 07:02:58,355  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2015-05-07 07:03:02,570  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2015-05-07 07:03:10,557  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2015-05-07 07:03:20,173  WARN [Worker-13] - ScalaProject - Project myProject has platform default sourceLevel.
+2015-05-07 07:03:20,173  WARN [Worker-13] - ScalaProject - Project myProject runs on platform default installation.
+2015-05-07 07:05:33,609  WARN [Worker-13] - ScalaProject - Project myProject has platform default sourceLevel.
+2015-05-07 07:05:33,609  WARN [Worker-13] - ScalaProject - Project myProject runs on platform default installation.
+2015-05-07 07:07:29,305  WARN [Worker-12] - ScalaProject - Project myProject has platform default sourceLevel.
+2015-05-07 07:07:29,305  WARN [Worker-12] - ScalaProject - Project myProject runs on platform default installation.
