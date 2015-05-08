@@ -97,6 +97,9 @@ class View {
     for (e <- a) println(e)
   }
   
+  def showStrategy(seat:Int,strat:Int)={
+    print(seat.toString)
+  }
 }
 
 

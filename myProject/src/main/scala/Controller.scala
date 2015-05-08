@@ -108,9 +108,10 @@ class Controller(view:View,model:Model) {
   }
   
   def VIEW_STRATEGY(seat:Int){
-    model.handArray(seat).strategy
+    
     view.displayThis("Player " + seat.toString+"'s strategy is")
     view.displayThis(model.handArray(seat).strategy.toString)
+    view.showStrategy(seat,model.handArray(seat).strategy)
   }
   
   
