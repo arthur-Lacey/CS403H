@@ -1,31 +1,304 @@
 [0m[[0mdebug[0m] [0m[0m
 [0m[[0mdebug[0m] [0mInitial source changes: [0m
-[0m[[0mdebug[0m] [0m	removed:Set()[0m
-[0m[[0mdebug[0m] [0m	added: Set()[0m
-[0m[[0mdebug[0m] [0m	modified: Set(C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\Model.scala)[0m
-[0m[[0mdebug[0m] [0mRemoved products: Set()[0m
+[0m[[0mdebug[0m] [0m	removed:Set(C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\Model.scala, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\main.scala, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\View.scala, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\Controller.scala, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\ViewTextLayoutWorking.scala, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\classOutlines.scala)[0m
+[0m[[0mdebug[0m] [0m	added: Set(C:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\View.scala, C:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala, C:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Controller.scala, C:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Model.scala, C:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\main.scala)[0m
+[0m[[0mdebug[0m] [0m	modified: Set()[0m
+[0m[[0mdebug[0m] [0mRemoved products: Set(C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\target\scala-2.10\classes\myProject\Model$Hand$$anonfun$showHand$3.class, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\target\scala-2.10\classes\myProject\Model$Deck$$anonfun$init$2.class, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\target\scala-2.10\classes\PlayArea.class, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\target\scala-2.10\classes\myProject\Model$Hand.class, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\target\scala-2.10\classes\myProject\Main.class, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\target\scala-2.10\classes\myProject\Model$Hand$$anonfun$showHand$2.class, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\target\scala-2.10\classes\Hand$$anonfun$1.class, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\target\scala-2.10\classes\myProject\Model$PlayArea$$anonfun$calculateScore$1.class, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\target\scala-2.10\classes\myProject\Model$Scoreboard.class, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\target\scala-2.10\classes\Scoreboard$$anonfun$winner$1.class, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\target\scala-2.10\classes\TurnQueue.class, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\target\scala-2.10\classes\myProject\Model$TurnQueue.class, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\target\scala-2.10\classes\myProject\Controller$$anonfun$SHOW_PLAYER_ORDER$1.class, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\target\scala-2.10\classes\SimControll$$anonfun$showBoard$1.class, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\target\scala-2.10\classes\myProject\Model$Deck$$anonfun$init$2$$anonfun$apply$1.class, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\target\scala-2.10\classes\myProject\Model$Card.class, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\target\scala-2.10\classes\PlayArea$$anonfun$calculateScore$1.class, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\target\scala-2.10\classes\myProject\Model$Scoreboard$$anonfun$loserCheck$1.class, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\target\scala-2.10\classes\myProject\View.class, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\target\scala-2.10\classes\Scoreboard$$anonfun$loserCheck$1.class, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\target\scala-2.10\classes\SimControll$$anonfun$showBoard$2.class, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\target\scala-2.10\classes\myProject\Model$PlayArea.class, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\target\scala-2.10\classes\Deck.class, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\target\scala-2.10\classes\PlayArea$$anonfun$max$1.class, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\target\scala-2.10\classes\Hearts$.class, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\target\scala-2.10\classes\SimControll$$anonfun$showQueue$1.class, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\target\scala-2.10\classes\SimControll$$anonfun$showBoard$4.class, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\target\scala-2.10\classes\myProject\Main$.class, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\target\scala-2.10\classes\Hearts.class, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\target\scala-2.10\classes\myProject\Model$Scoreboard$$anonfun$winner$1.class, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\target\scala-2.10\classes\myProject\Model$Hand$$anonfun$showHand$1.class, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\target\scala-2.10\classes\Scoreboard.class, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\target\scala-2.10\classes\Card.class, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\target\scala-2.10\classes\myProject\Controller.class, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\target\scala-2.10\classes\SimControll$$anonfun$showBoard$3.class, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\target\scala-2.10\classes\myProject\Model.class, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\target\scala-2.10\classes\SimControll.class, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\target\scala-2.10\classes\myProject\Model$Hand$$anonfun$draw$1.class, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\target\scala-2.10\classes\Hand.class, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\target\scala-2.10\classes\myProject\Model$Scoreboard$$anonfun$init$1.class, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\target\scala-2.10\classes\myProject\Model$Deck.class, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\target\scala-2.10\classes\myProject\Model$Hand$$anonfun$showHand$4.class, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\target\scala-2.10\classes\myProject\Model$Hand$$anonfun$hasTwoClubs$1.class, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\target\scala-2.10\classes\myProject\Model$PlayArea$$anonfun$1.class, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\target\scala-2.10\classes\myProject\Model$Hand$$anonfun$helper$1$2.class, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\target\scala-2.10\classes\myProject\Model$Hand$$anonfun$helper$1$1.class, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\target\scala-2.10\classes\myProject\Model$PlayArea$$anonfun$max$1.class, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\target\scala-2.10\classes\Hand$$anonfun$draw$1.class)[0m
 [0m[[0mdebug[0m] [0mExternal API changes: API Changes: Set()[0m
 [0m[[0mdebug[0m] [0mModified binary dependencies: Set()[0m
-[0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set(C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\Model.scala)[0m
+[0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set(C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\Model.scala, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\main.scala, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\View.scala, C:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\View.scala, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\Controller.scala, C:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala, C:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Controller.scala, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\ViewTextLayoutWorking.scala, C:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Model.scala, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\classOutlines.scala, C:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\main.scala)[0m
 [0m[[0mdebug[0m] [0m[0m
 [0m[[0mdebug[0m] [0mSources indirectly invalidated by:[0m
-[0m[[0mdebug[0m] [0m	product: Set()[0m
+[0m[[0mdebug[0m] [0m	product: Set(C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\Model.scala, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\main.scala, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\View.scala, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\Controller.scala, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\classOutlines.scala)[0m
 [0m[[0mdebug[0m] [0m	binary dep: Set()[0m
 [0m[[0mdebug[0m] [0m	external source: Set()[0m
-[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\Model.scala)[0m
-[0m[[0minfo[0m] [0mCompiling 1 Scala source to C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\target\scala-2.10\classes...[0m
+[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\Model.scala, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\main.scala, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\View.scala, C:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\View.scala, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\Controller.scala, C:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala, C:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Controller.scala, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\ViewTextLayoutWorking.scala, C:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Model.scala, C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\classOutlines.scala, C:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\main.scala)[0m
+[0m[[0mdebug[0m] [0mRecompiling all 5 sources: invalidated sources (11) exceeded 50.0% of all sources[0m
+[0m[[0minfo[0m] [0mCompiling 5 Scala sources to C:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\target\scala-2.10\classes...[0m
 [0m[[0mdebug[0m] [0mGetting compiler-interface from component compiler for Scala 2.10.4[0m
 [0m[[0mdebug[0m] [0mGetting compiler-interface from component compiler for Scala 2.10.4[0m
-[0m[[0mdebug[0m] [0mRunning cached compiler 8d8ed3, interfacing (CompilerInterface) with Scala compiler version 2.10.4[0m
+[0m[[0mdebug[0m] [0mRunning cached compiler 6cfb2f, interfacing (CompilerInterface) with Scala compiler version 2.10.4[0m
 [0m[[0mdebug[0m] [0mCalling Scala compiler with arguments  (CompilerInterface):[0m
 [0m[[0mdebug[0m] [0m	-bootclasspath[0m
 [0m[[0mdebug[0m] [0m	C:\Program Files\Java\jdk1.8.0_45\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_45\jre\classes;C:\Users\x65977\.sbt\boot\scala-2.10.4\lib\scala-library.jar[0m
 [0m[[0mdebug[0m] [0m	-classpath[0m
-[0m[[0mdebug[0m] [0m	C:\Users\x65977\Documents\GitHub\cs403\myProject\src\main\scala\target\scala-2.10\classes[0m
-[0m[[0mdebug[0m] [0mScala compilation took 4.663037003 s[0m
-[0m[[0mdebug[0m] [0mNew invalidations:[0m
-[0m[[0mdebug[0m] [0m	Set()[0m
-[0m[[0mdebug[0m] [0mInitial set of included nodes: Set()[0m
-[0m[[0mdebug[0m] [0mPreviously invalidated, but (transitively) depend on new invalidations:[0m
-[0m[[0mdebug[0m] [0m	Set()[0m
-[0m[[0mdebug[0m] [0mAll newly invalidated sources after taking into account (previously) recompiled sources:Set()[0m
+[0m[[0mdebug[0m] [0m	C:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\target\scala-2.10\classes[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:2: object swing is not a member of package scala[0m
+[0m[[31merror[0m] [0mimport scala.swing._[0m
+[0m[[31merror[0m] [0m             ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:8: not found: type MainFrame[0m
+[0m[[31merror[0m] [0m  val Frame=new MainFrame[0m
+[0m[[31merror[0m] [0m                ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:10: not found: type BoxPanel[0m
+[0m[[31merror[0m] [0m  val gui=new BoxPanel(Orientation.Horizontal){[0m
+[0m[[31merror[0m] [0m              ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:11: not found: value BorderPanel[0m
+[0m[[31merror[0m] [0m    import BorderPanel.Position._[0m
+[0m[[31merror[0m] [0m           ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:13: not found: type BoxPanel[0m
+[0m[[31merror[0m] [0m    val menuArea=new BoxPanel(Orientation.Vertical){[0m
+[0m[[31merror[0m] [0m                     ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:16: not found: type Button[0m
+[0m[[31merror[0m] [0m      val moveButton=new Button("Do Move") {[0m
+[0m[[31merror[0m] [0m                         ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:17: not found: type Action[0m
+[0m[[31merror[0m] [0m        case class moveAction(t:String) extends Action(t){[0m
+[0m[[31merror[0m] [0m                                                ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:17: too many arguments for constructor Object: ()Object[0m
+[0m[[31merror[0m] [0m        case class moveAction(t:String) extends Action(t){[0m
+[0m[[31merror[0m] [0m                             ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:26: value action_= is not a member of AnyRef{case class moveAction extends Product with Serializable; object moveAction; val a: this.moveAction}[0m
+[0m[[31merror[0m] [0m        this.action_=(a)[0m
+[0m[[31merror[0m] [0m             ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:27: not found: value horizontalAlignment_=[0m
+[0m[[31merror[0m] [0m        horizontalAlignment_=(Alignment.Left)[0m
+[0m[[31merror[0m] [0m        ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:28: not found: value verticalAlignment_=[0m
+[0m[[31merror[0m] [0m        verticalAlignment_=(Alignment.Top)[0m
+[0m[[31merror[0m] [0m        ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:32: not found: type Button[0m
+[0m[[31merror[0m] [0m      val turnButton=new Button("Do Turn"){[0m
+[0m[[31merror[0m] [0m                         ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:33: not found: type Action[0m
+[0m[[31merror[0m] [0m        case class turnAction(t:String) extends Action(t){[0m
+[0m[[31merror[0m] [0m                                                ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:33: too many arguments for constructor Object: ()Object[0m
+[0m[[31merror[0m] [0m        case class turnAction(t:String) extends Action(t){[0m
+[0m[[31merror[0m] [0m                             ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:38: value action_= is not a member of AnyRef{case class turnAction extends Product with Serializable; object turnAction; val a: this.turnAction}[0m
+[0m[[31merror[0m] [0m        this.action_=(a)[0m
+[0m[[31merror[0m] [0m             ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:39: not found: value verticalAlignment_=[0m
+[0m[[31merror[0m] [0m        verticalAlignment_=(Alignment.Top)[0m
+[0m[[31merror[0m] [0m        ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:42: not found: type Button[0m
+[0m[[31merror[0m] [0m      val gameButton=new Button("Do Game"){[0m
+[0m[[31merror[0m] [0m                         ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:43: not found: type Action[0m
+[0m[[31merror[0m] [0m        case class gameAction(t:String) extends Action(t){[0m
+[0m[[31merror[0m] [0m                                                ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:43: too many arguments for constructor Object: ()Object[0m
+[0m[[31merror[0m] [0m        case class gameAction(t:String) extends Action(t){[0m
+[0m[[31merror[0m] [0m                             ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:48: value action_= is not a member of AnyRef{case class gameAction extends Product with Serializable; object gameAction; val a: this.gameAction}[0m
+[0m[[31merror[0m] [0m        this.action_=(a)[0m
+[0m[[31merror[0m] [0m             ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:49: not found: value verticalAlignment_=[0m
+[0m[[31merror[0m] [0m        verticalAlignment_=(Alignment.Top)[0m
+[0m[[31merror[0m] [0m        ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:52: not found: type Button[0m
+[0m[[31merror[0m] [0m      val advanceButton=new Button("Advance Player Order"){[0m
+[0m[[31merror[0m] [0m                            ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:53: not found: type Action[0m
+[0m[[31merror[0m] [0m        case class advanceAction(t:String) extends Action(t){[0m
+[0m[[31merror[0m] [0m                                                   ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:53: too many arguments for constructor Object: ()Object[0m
+[0m[[31merror[0m] [0m        case class advanceAction(t:String) extends Action(t){[0m
+[0m[[31merror[0m] [0m                                ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:58: value action_= is not a member of AnyRef{case class advanceAction extends Product with Serializable; object advanceAction; val a: this.advanceAction}[0m
+[0m[[31merror[0m] [0m        this.action_=(a)[0m
+[0m[[31merror[0m] [0m             ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:59: not found: value verticalAlignment_=[0m
+[0m[[31merror[0m] [0m        verticalAlignment_=(Alignment.Top)[0m
+[0m[[31merror[0m] [0m        ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:62: not found: type Label[0m
+[0m[[31merror[0m] [0m      val playerOrder=new Label("Player Order Here"){[0m
+[0m[[31merror[0m] [0m                          ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:63: not found: value verticalAlignment_=[0m
+[0m[[31merror[0m] [0m        verticalAlignment_=(Alignment.Top)[0m
+[0m[[31merror[0m] [0m        ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:69: not found: type MenuBar[0m
+[0m[[31merror[0m] [0m      val stratMenu=new MenuBar(){[0m
+[0m[[31merror[0m] [0m                        ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:70: not found: value maximumSize_=[0m
+[0m[[31merror[0m] [0m        maximumSize_=(new Dimension(100,100))[0m
+[0m[[31merror[0m] [0m        ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:71: not found: value minimumSize_=[0m
+[0m[[31merror[0m] [0m        minimumSize_=(new Dimension(100,50))[0m
+[0m[[31merror[0m] [0m        ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:73: not found: value contents[0m
+[0m[[31merror[0m] [0m        contents+=new Menu("Set Strategies"){[0m
+[0m[[31merror[0m] [0m        ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:225: not found: type Label[0m
+[0m[[31merror[0m] [0m      val p1Strat = new Label("Player 1: ")[0m
+[0m[[31merror[0m] [0m                        ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:226: not found: type Label[0m
+[0m[[31merror[0m] [0m      val p2Strat = new Label("Player 2: ")[0m
+[0m[[31merror[0m] [0m                        ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:227: not found: type Label[0m
+[0m[[31merror[0m] [0m      val p3Strat = new Label("Player 3: ")[0m
+[0m[[31merror[0m] [0m                        ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:228: not found: type Label[0m
+[0m[[31merror[0m] [0m      val p4Strat = new Label("Player 4: ")[0m
+[0m[[31merror[0m] [0m                        ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:231: not found: type Button[0m
+[0m[[31merror[0m] [0m      val reset=new Button("RESET"){[0m
+[0m[[31merror[0m] [0m                    ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:232: not found: type Action[0m
+[0m[[31merror[0m] [0m        case class resetAction(t:String) extends Action(t){[0m
+[0m[[31merror[0m] [0m                                                 ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:232: too many arguments for constructor Object: ()Object[0m
+[0m[[31merror[0m] [0m        case class resetAction(t:String) extends Action(t){[0m
+[0m[[31merror[0m] [0m                              ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:237: value action_= is not a member of AnyRef{case class resetAction extends Product with Serializable; object resetAction; val a: this.resetAction}[0m
+[0m[[31merror[0m] [0m        this.action_=(a)        [0m
+[0m[[31merror[0m] [0m             ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:215: not found: value contents[0m
+[0m[[31merror[0m] [0m      contents += stratMenu[0m
+[0m[[31merror[0m] [0m      ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:217: not found: value contents[0m
+[0m[[31merror[0m] [0m      contents += moveButton   [0m
+[0m[[31merror[0m] [0m      ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:218: not found: value contents[0m
+[0m[[31merror[0m] [0m      contents += turnButton[0m
+[0m[[31merror[0m] [0m      ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:219: not found: value contents[0m
+[0m[[31merror[0m] [0m      contents += gameButton[0m
+[0m[[31merror[0m] [0m      ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:220: not found: value contents[0m
+[0m[[31merror[0m] [0m      contents += advanceButton[0m
+[0m[[31merror[0m] [0m      ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:221: not found: value contents[0m
+[0m[[31merror[0m] [0m      contents += playerOrder[0m
+[0m[[31merror[0m] [0m      ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:224: not found: value contents[0m
+[0m[[31merror[0m] [0m      contents += new Label("Player Strategies:")[0m
+[0m[[31merror[0m] [0m      ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:230: not found: value contents[0m
+[0m[[31merror[0m] [0m      contents+=p1Strat;contents+=p2Strat; contents+= p3Strat; contents+=p4Strat[0m
+[0m[[31merror[0m] [0m      ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:230: not found: value contents[0m
+[0m[[31merror[0m] [0m      contents+=p1Strat;contents+=p2Strat; contents+= p3Strat; contents+=p4Strat[0m
+[0m[[31merror[0m] [0m                        ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:230: not found: value contents[0m
+[0m[[31merror[0m] [0m      contents+=p1Strat;contents+=p2Strat; contents+= p3Strat; contents+=p4Strat[0m
+[0m[[31merror[0m] [0m                                           ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:230: not found: value contents[0m
+[0m[[31merror[0m] [0m      contents+=p1Strat;contents+=p2Strat; contents+= p3Strat; contents+=p4Strat[0m
+[0m[[31merror[0m] [0m                                                               ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:240: not found: value contents[0m
+[0m[[31merror[0m] [0m      contents+=reset[0m
+[0m[[31merror[0m] [0m      ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:249: not found: type BorderPanel[0m
+[0m[[31merror[0m] [0m    val playArea=new BorderPanel{[0m
+[0m[[31merror[0m] [0m                     ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:251: not found: value Orientation[0m
+[0m[[31merror[0m] [0m      case class hand(orientation: Orientation.Value = Orientation.Horizontal) extends BoxPanel(orientation){[0m
+[0m[[31merror[0m] [0m                                   ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:251: not found: type BoxPanel[0m
+[0m[[31merror[0m] [0m      case class hand(orientation: Orientation.Value = Orientation.Horizontal) extends BoxPanel(orientation){[0m
+[0m[[31merror[0m] [0m                                                                                       ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:263: not found: value Orientation[0m
+[0m[[31merror[0m] [0m      val hand0= new hand(Orientation.Horizontal){[0m
+[0m[[31merror[0m] [0m                          ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:252: not found: type Label[0m
+[0m[[31merror[0m] [0m        val cards=Array[Label](new Label("Card 1 "),[0m
+[0m[[31merror[0m] [0m                        ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:269: not found: value Orientation[0m
+[0m[[31merror[0m] [0m      val hand1= new hand(Orientation.Vertical){[0m
+[0m[[31merror[0m] [0m                          ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:274: not found: value Orientation[0m
+[0m[[31merror[0m] [0m      val hand2= new hand(Orientation.Horizontal){        [0m
+[0m[[31merror[0m] [0m                          ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:279: not found: value Orientation[0m
+[0m[[31merror[0m] [0m      val hand3=new hand(Orientation.Vertical){[0m
+[0m[[31merror[0m] [0m                         ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:285: not found: type BorderPanel[0m
+[0m[[31merror[0m] [0m      val cardArea=new BorderPanel{[0m
+[0m[[31merror[0m] [0m                       ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:286: not found: type Label[0m
+[0m[[31merror[0m] [0m        val p1Card=new Label("p1Card")[0m
+[0m[[31merror[0m] [0m                       ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:287: not found: type Label[0m
+[0m[[31merror[0m] [0m        val p2Card=new Label("p2Card")[0m
+[0m[[31merror[0m] [0m                       ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:288: not found: type Label[0m
+[0m[[31merror[0m] [0m        val p3Card=new Label("p3Card")[0m
+[0m[[31merror[0m] [0m                       ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:289: not found: type Label[0m
+[0m[[31merror[0m] [0m        val p4Card=new Label("p4Card")[0m
+[0m[[31merror[0m] [0m                       ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:290: not found: type BoxPanel[0m
+[0m[[31merror[0m] [0m        val scoreArea=new BoxPanel(Orientation.Vertical){[0m
+[0m[[31merror[0m] [0m                          ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:291: not found: type Label[0m
+[0m[[31merror[0m] [0m          val scoreBoard=new Label("Scores")[0m
+[0m[[31merror[0m] [0m                             ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:292: not found: type Label[0m
+[0m[[31merror[0m] [0m          val p1Score=new Label("Player 1: ")[0m
+[0m[[31merror[0m] [0m                          ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:293: not found: type Label[0m
+[0m[[31merror[0m] [0m          val p2Score=new Label("Player 2: ")[0m
+[0m[[31merror[0m] [0m                          ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:294: not found: type Label[0m
+[0m[[31merror[0m] [0m          val p3Score=new Label("Player 3: ")[0m
+[0m[[31merror[0m] [0m                          ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:295: not found: type Label[0m
+[0m[[31merror[0m] [0m          val p4Score=new Label("Player 4: ")[0m
+[0m[[31merror[0m] [0m                          ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:296: not found: value contents[0m
+[0m[[31merror[0m] [0m          contents+=scoreBoard[0m
+[0m[[31merror[0m] [0m          ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:297: not found: value contents[0m
+[0m[[31merror[0m] [0m          contents+=p1Score[0m
+[0m[[31merror[0m] [0m          ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:298: not found: value contents[0m
+[0m[[31merror[0m] [0m          contents+=p2Score[0m
+[0m[[31merror[0m] [0m          ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:299: not found: value contents[0m
+[0m[[31merror[0m] [0m          contents+=p3Score[0m
+[0m[[31merror[0m] [0m          ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:300: not found: value contents[0m
+[0m[[31merror[0m] [0m          contents+=p4Score[0m
+[0m[[31merror[0m] [0m          ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:303: not found: value layout[0m
+[0m[[31merror[0m] [0m        layout+=p1Card->North[0m
+[0m[[31merror[0m] [0m        ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:304: not found: value layout[0m
+[0m[[31merror[0m] [0m        layout+=p2Card->West[0m
+[0m[[31merror[0m] [0m        ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:305: not found: value layout[0m
+[0m[[31merror[0m] [0m        layout+=p3Card->South[0m
+[0m[[31merror[0m] [0m        ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:306: not found: value layout[0m
+[0m[[31merror[0m] [0m        layout+=p4Card->East[0m
+[0m[[31merror[0m] [0m        ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:307: not found: value layout[0m
+[0m[[31merror[0m] [0m        layout+=scoreArea->Center[0m
+[0m[[31merror[0m] [0m        ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:251: not found: value Orientation[0m
+[0m[[31merror[0m] [0m      case class hand(orientation: Orientation.Value = Orientation.Horizontal) extends BoxPanel(orientation){[0m
+[0m[[31merror[0m] [0m                                                       ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:251: too many arguments for constructor Object: ()Object[0m
+[0m[[31merror[0m] [0m      case class hand(orientation: Orientation.Value = Orientation.Horizontal) extends BoxPanel(orientation){[0m
+[0m[[31merror[0m] [0m                     ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:260: not found: type Label[0m
+[0m[[31merror[0m] [0m        def getCards():Array[Label]=cards[0m
+[0m[[31merror[0m] [0m                             ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:266: not found: value layout[0m
+[0m[[31merror[0m] [0m      layout+= hand0 -> North[0m
+[0m[[31merror[0m] [0m      ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:272: not found: value layout[0m
+[0m[[31merror[0m] [0m      layout+= hand1 -> West[0m
+[0m[[31merror[0m] [0m      ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:277: not found: value layout[0m
+[0m[[31merror[0m] [0m      layout+=hand2 -> South[0m
+[0m[[31merror[0m] [0m      ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:282: not found: value layout[0m
+[0m[[31merror[0m] [0m      layout+=hand3 -> East[0m
+[0m[[31merror[0m] [0m      ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:310: not found: value layout[0m
+[0m[[31merror[0m] [0m      layout+=cardArea -> Center[0m
+[0m[[31merror[0m] [0m      ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:244: not found: value contents[0m
+[0m[[31merror[0m] [0m    contents += menuArea[0m
+[0m[[31merror[0m] [0m    ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:313: not found: value contents[0m
+[0m[[31merror[0m] [0m    contents += playArea[0m
+[0m[[31merror[0m] [0m    ^[0m
+[0m[[31merror[0m] [0mC:\Users\x65977\Documents\GitHub\CS403H\myProject\src\main\scala\Gui.scala:371: value text_= is not a member of AnyRef[0m
+[0m[[31merror[0m] [0m    gui.menuArea.playerOrder.text_=(s)[0m
+[0m[[31merror[0m] [0m                             ^[0m
+[0m[[31merror[0m] [0m92 errors found[0m
+[0m[[0mdebug[0m] [0mCompilation failed (CompilerInterface)[0m
+[0m[[31merror[0m] [0m(compile:[31mcompile[0m) Compilation failed[0m

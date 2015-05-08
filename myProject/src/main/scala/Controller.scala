@@ -18,10 +18,19 @@ class Controller(view:View,model:Model) {
     SHOW_PLAYER_ORDER
     view.displayThis("-----")
     view.displayThis("The Table:")
+    
     view.displayThis("Player 0 has played: "+(model.playArea.cards(0).rank,model.playArea.cards(0).suit).toString)
+    view.card0Update(model.playArea.cards(0).toString)
+    
     view.displayThis("Player 1 has played: "+(model.playArea.cards(1).rank,model.playArea.cards(1).suit).toString)
+    view.card1Update(model.playArea.cards(1).toString)
+    
     view.displayThis("Player 2 has played: "+(model.playArea.cards(2).rank,model.playArea.cards(2).suit).toString)
+    view.card1Update(model.playArea.cards(2).toString)
+    
     view.displayThis("Player 3 has played: "+(model.playArea.cards(3).rank,model.playArea.cards(3).suit).toString)
+    view.card1Update(model.playArea.cards(3).toString)
+    
     view.displayThis("-----")
     view.displayThis("The Scores Are:")
     view.displayThis("Player 0: "+model.scoreBoard.scores(0).toString)
@@ -43,6 +52,7 @@ class Controller(view:View,model:Model) {
     model.queue.enqueue(temp)
     view.displayThis("ORDER CYCLED")
     SHOW_PLAYER_ORDER
+    
   }
   def WINNER_CHECK{
     var winString=""
@@ -62,9 +72,17 @@ class Controller(view:View,model:Model) {
   def DO_MOVE {
     model.doTrick
     val cards=model.playArea.cards
-    cards
+    //view.playCards(cards)
     SHOW_PLAYING_AREA
+    GET_SCORES
+    WINNER_CHECK
   }
+  
+  def SHOW_PLAY(){
+    val cards=model.playArea.getCards
+    view.playCards(cards)
+  }
+  
   def DO_TURN{
     DO_MOVE
     DO_MOVE
@@ -86,4 +104,25 @@ class Controller(view:View,model:Model) {
     view.refresh()
 
   }
+  
+  def SET_STRATEGY(seat:Int,strat:Int){
+    model.handArray(seat).strategy=strat
+    view.displayThis("player "+seat.toString+"'s strategy is "+strat.toString)
+  }
+  
+  def VIEW_STRATEGY(seat:Int){
+    
+    view.displayThis("Player " + seat.toString+"'s strategy is")
+    view.displayThis(model.handArray(seat).strategy.toString)
+    view.showStrategy(seat,model.handArray(seat).strategy)
+  }
+  
+  def GET_SCORES{
+    view.showScores(model.scoreBoard.getScores)
+  }
+  
+  
+  
+  
+  
 }
