@@ -312,11 +312,11 @@ object Gui extends View{
   
   
   override def playCards(a:Array[String])={
-    for (i <- 0 until a.length) i match  {
-      case 0=>card0Update(a(i))
-      case 1=>card1Update(a(i))
-      case 2=>card2Update(a(i))
-      case 3=>card3Update(a(i))
+    for (i <- 0 until a.length) i match = {
+      case 0=>card0Update(a(0))
+      case 1=>card1Update(a(0))
+      case 2=>card2Update(a(0))
+      case 3=>card3Update(a(0))
       case _=>println(a(i))
     }
   }
