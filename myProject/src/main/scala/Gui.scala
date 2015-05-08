@@ -1,6 +1,7 @@
 package myProject
 import scala.swing._
 //import Controller
+//import Model.Card
 
 object Gui extends View{
   
@@ -14,7 +15,11 @@ object Gui extends View{
       
       val moveButton=new Button("Do Move") {
         case class moveAction(t:String) extends Action(t){
-          def apply()=controller.get.DO_MOVE
+          def apply()={
+            controller.get.DO_MOVE
+            controller.get.SHOW_PLAY
+          }
+          
         }
         
         val a=new moveAction("move")
@@ -218,10 +223,12 @@ object Gui extends View{
       
       
       contents += new Label("Player Strategies:")
-      contents += new Label("Player 1: ")
-      contents += new Label("Player 2: ")
-      contents += new Label("Player 3: ")
-      contents += new Label("Player 4: ")
+      val p1Strat = new Label("Player 1: ")
+      val p2Strat = new Label("Player 2: ")
+      val p3Strat = new Label("Player 3: ")
+      val p4Strat = new Label("Player 4: ")
+      
+      contents+=p1Strat;contents+=p2Strat; contents+= p3Strat; contents+=p4Strat
       val reset=new Button("RESET"){
         case class resetAction(t:String) extends Action(t){
           def apply()=controller.get.INIT
@@ -302,24 +309,25 @@ object Gui extends View{
   //}
   
     
-  /*
-  def card0Update(c:Card)={
-    gui.cardArea.p1Card.text_=(c.rank.toString+c.suit(0).toString))
+  
+  override def card0Update(s:String)={
+    gui.playArea.cardArea.p1Card.text_=(s)
   }
   
-  def card1update(c:Card)={
-    gui.cardArea.p2Card.text_=(c.rank.toString+c.suit(0).toString))
+  override def card1Update(s:String)={
+    gui.playArea.cardArea.p2Card.text_=(s)
   }
   
   
-  def card2Update(c:Card)={
-    gui.cardArea.p3Card.text_=(c.rank.toString+c.suit(0).toString))
+  override def card2Update(s:String)={
+    gui.playArea.cardArea.p3Card.text_=(s)
   }
   
-  def card3Update(c:Card)={
-    gui.cardArea.p4Card.text_=(c.rank.toString+c.suit(0).toString))
+  override def card3Update(s:String)={
+    gui.playArea.cardArea.p4Card.text_=(s)
   }
-  */
+  
+  
     
     
     

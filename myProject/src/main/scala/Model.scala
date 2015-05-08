@@ -17,9 +17,12 @@ class Card (val rank: Int, val suit: String){
   def isDiamond:Boolean=(suit=="Diamond")
   def isHigher(compare:Card):Boolean=(rank>compare.rank)
   def equals(compare: Card): Boolean={
-    if (this.rank==compare.rank&&this.suit==compare.suit) true
-    else false
+    this.rank==compare.rank&&this.suit==compare.suit
   }
+  
+  override def toString()= if(suit!=null)rank.toString+suit(0).toString else " "
+    
+    
   }
 
 class Deck{
@@ -55,12 +58,13 @@ class Hand (val seat:Int, var strategy: Int){
   private val nullCard = new Card(-1,null)
 
   
+  
   //Functions
   def init= {
     heartList=List[Card]()
-  spadeList=List[Card]()
-  clubList=List[Card]()
-  diamondList=List[Card]()
+    spadeList=List[Card]()
+    clubList=List[Card]()
+    diamondList=List[Card]()
   }
   
   
@@ -320,6 +324,15 @@ class PlayArea{
   private val nullCard=new Card(-1,null)
   var lead="Any"//figure out how you want to calculate the lead
   val cards= Array.fill[Card](4)(nullCard)
+  
+  def getCards():Array[String]={
+    val out=Array.fill[String](4)("")
+    for(i<-0 until cards.length){
+      out(i)=cards(i).toString
+    }
+    out
+  }
+  
   def max: Int= {
     var ind= -1
     var best=0

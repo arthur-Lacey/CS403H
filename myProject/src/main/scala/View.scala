@@ -83,6 +83,20 @@ class View {
   def showHand3(s:String)=println(s)
   
   def refresh()=println("REFRESH YOSELF")
+  
+  
+  def card0Update(s:String)=println(s)
+    
+  def card1Update(s:String)=println(s)
+    
+  def card2Update(s:String)=println(s)
+  
+  def card3Update(s:String)=println(s)
+  
+  def playCards(a:Array[String])={
+    for (e <- a) println(e)
+  }
+  
 }
 
 
