@@ -20,7 +20,7 @@ class Card (val rank: Int, val suit: String){
     this.rank==compare.rank&&this.suit==compare.suit
   }
   
-  override def toString()= if(suit!=null)rank.toString+suit(0).toString else "    "
+  override def toString()= if(suit!=null)rank.toString+suit(0).toString else " "
     
     
   }
@@ -383,8 +383,7 @@ class Scoreboard{
     }
     ind
   }
-  
-  def getScores():Array[Int]=scores
+
 }
 
 class TurnQueue extends Queue[Int]{

@@ -383,8 +383,7 @@ class Scoreboard{
     }
     ind
   }
-  
-  def getScores():Array[Int]=scores
+
 }
 
 class TurnQueue extends Queue[Int]{

@@ -287,24 +287,11 @@ object Gui extends View{
         val p2Card=new Label("p2Card")
         val p3Card=new Label("p3Card")
         val p4Card=new Label("p4Card")
-        val scoreArea=new BoxPanel(Orientation.Vertical){
-          val scoreBoard=new Label("Scores")
-          val p1Score=new Label("Player 1: ")
-          val p2Score=new Label("Player 2: ")
-          val p3Score=new Label("Player 3: ")
-          val p4Score=new Label("Player 4: ")
-          contents+=scoreBoard
-          contents+=p1Score
-          contents+=p2Score
-          contents+=p3Score
-          contents+=p4Score
-          
-        }
+        
         layout+=p1Card->North
         layout+=p2Card->West
         layout+=p3Card->South
         layout+=p4Card->East
-        layout+=scoreArea->Center
       }
       
       layout+=cardArea -> Center
@@ -321,16 +308,7 @@ object Gui extends View{
   //}
   
     
-  override def showScores(a:Array[Int])={
-     for (i<-0 until a.length) i match{
-       case 0=> gui.playArea.cardArea.scoreArea.p1Score.text_=("Player 1: "+a(i))
-       case 1=> gui.playArea.cardArea.scoreArea.p2Score.text_=("Player 2: "+a(i))
-       case 2=> gui.playArea.cardArea.scoreArea.p3Score.text_=("Player 3: "+a(i))
-       case 3=> gui.playArea.cardArea.scoreArea.p4Score.text_=("Player 4: "+a(i))
-       case _=> "lol"
-     } 
-  }
-    
+  
   override def showStrategy(seat:Int,strat:Int)=seat match{
       case 0=>gui.menuArea.p1Strat.text_=("Player: "+(seat +1)+", strategy: "+(strat+1).toString);
       case 1=>gui.menuArea.p2Strat.text_=("Player: "+(seat +1)+", strategy: "+(strat+1).toString);

@@ -73,7 +73,6 @@ class Controller(view:View,model:Model) {
     val cards=model.playArea.cards
     //view.playCards(cards)
     SHOW_PLAYING_AREA
-    GET_SCORES
   }
   
   def SHOW_PLAY(){
@@ -113,10 +112,6 @@ class Controller(view:View,model:Model) {
     view.displayThis("Player " + seat.toString+"'s strategy is")
     view.displayThis(model.handArray(seat).strategy.toString)
     view.showStrategy(seat,model.handArray(seat).strategy)
-  }
-  
-  def GET_SCORES{
-    view.showScores(model.scoreBoard.getScores)
   }
   
   

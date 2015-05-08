@@ -100,8 +100,6 @@ class View {
   def showStrategy(seat:Int,strat:Int)={
     print(seat.toString)
   }
-  
-  def showScores(a:Array[Int])=println(a)
 }
 
 
