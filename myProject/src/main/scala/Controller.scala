@@ -61,11 +61,15 @@ class Controller(view:View,model:Model) {
   }
   def DO_MOVE {
     model.doTrick
+    val cards=model.playArea.cards
+    cards
     SHOW_PLAYING_AREA
   }
   def DO_TURN{
-    model.completeTrick
-    view.displayThis("turn complete")
+    DO_MOVE
+    DO_MOVE
+    DO_MOVE
+    DO_MOVE
   }
   def DO_GAME{
     view.displayThis("FULL GAME")
