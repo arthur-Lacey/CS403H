@@ -82,4 +82,20 @@ class Controller(view:View,model:Model) {
     view.refresh()
 
   }
+  
+  def SET_STRATEGY(seat:Int,strat:Int){
+    model.handArray(seat).strategy=strat
+    view.displayThis("player "+seat.toString+"'s strategy is "+strat.toString)
+  }
+  
+  def VIEW_STRATEGY(seat:Int){
+    model.handArray(seat).strategy
+    view.displayThis("Player " + seat.toString+"'s strategy is")
+    view.displayThis(model.handArray(seat).strategy.toString)
+  }
+  
+  
+  
+  
+  
 }

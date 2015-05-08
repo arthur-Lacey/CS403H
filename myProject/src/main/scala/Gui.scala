@@ -66,43 +66,138 @@ object Gui extends View{
         minimumSize_=(new Dimension(100,50))
         //verticalAlignment_=(Alignment.Top)
         contents+=new Menu("Set Strategies"){
-          var strategy=0
-          val m1=new Menu("Strategy 1: Description"){
-            strategy=0
-            
-            //apply this template to all following options
+          
+          val m1=new Menu("Strategy 1: Hearts"){
             val p1=new MenuItem("Player 1"){
               //modify action to be a controller set strategy thing
-              case class strategyAction(t:String) extends Action(t){def apply()=controller.get.DO_GAME              }
-              val a=new strategyAction("Set: Player 1");this.action_=(a)
+              case class strategyAction(t:String) extends Action(t){
+                def apply()=controller.get.SET_STRATEGY(0,0)
+              }
+              val a=new strategyAction("Set: Player 1")
+              this.action_=(a)
             }
-            val p2=new MenuItem("Player 2")
-            val p3=new MenuItem("Player 3")
-            val p4=new MenuItem("Player 4")
+            val p2=new MenuItem("Player 2"){
+              case class strategyAction(t:String) extends Action(t){
+                def apply()=controller.get.SET_STRATEGY(1,0)
+              }
+              val a=new strategyAction("Set: Player 2")
+              this.action_=(a)
+            }
+            val p3=new MenuItem("Player 3"){
+              case class strategyAction(t:String) extends Action(t){
+                def apply()=controller.get.SET_STRATEGY(2,0)
+              }
+              val a=new strategyAction("Set: Player 3")
+              this.action_=(a)
+            }
+            val p4=new MenuItem("Player 4"){
+              case class strategyAction(t:String) extends Action(t){
+                def apply()=controller.get.SET_STRATEGY(3,0)
+              }
+              val a=new strategyAction("Set: Player 4")
+              this.action_=(a)
+            }
             contents+=p1;contents+=p2;contents+=p3;contents+=p4;
           }
-          val m2=new Menu("Strategy 2: Description"){
-            strategy=1
-            val p1=new MenuItem("Player 1")
-            val p2=new MenuItem("Player 2")
-            val p3=new MenuItem("Player 3")
-            val p4=new MenuItem("Player 4")
+          
+          
+          val m2=new Menu("Strategy 2: Spades"){
+            
+             val p1=new MenuItem("Player 1"){
+              //modify action to be a controller set strategy thing
+              case class strategyAction(t:String) extends Action(t){
+                def apply()=controller.get.SET_STRATEGY(0,1)
+              }
+              val a=new strategyAction("Set: Player 1")
+              this.action_=(a)
+            }
+            val p2=new MenuItem("Player 2"){
+              case class strategyAction(t:String) extends Action(t){
+                def apply()=controller.get.SET_STRATEGY(1,1)
+              }
+              val a=new strategyAction("Set: Player 2")
+              this.action_=(a)
+            }
+            val p3=new MenuItem("Player 3"){
+              case class strategyAction(t:String) extends Action(t){
+                def apply()=controller.get.SET_STRATEGY(2,1)
+              }
+              val a=new strategyAction("Set: Player 3")
+              this.action_=(a)
+            }
+            val p4=new MenuItem("Player 4"){
+              case class strategyAction(t:String) extends Action(t){
+                def apply()=controller.get.SET_STRATEGY(3,1)
+              }
+              val a=new strategyAction("Set: Player 4")
+              this.action_=(a)
+            }
             contents+=p1;contents+=p2;contents+=p3;contents+=p4;
           }
-          val m3=new Menu("Strategy 3: Description"){
-            strategy=2
-            val p1=new MenuItem("Player 1")
-            val p2=new MenuItem("Player 2")
-            val p3=new MenuItem("Player 3")
-            val p4=new MenuItem("Player 4")
+          val m3=new Menu("Strategy 3: Clubs"){
+            
+             val p1=new MenuItem("Player 1"){
+              //modify action to be a controller set strategy thing
+              case class strategyAction(t:String) extends Action(t){
+                def apply()=controller.get.SET_STRATEGY(0,2)
+              }
+              val a=new strategyAction("Set: Player 1")
+              this.action_=(a)
+            }
+            val p2=new MenuItem("Player 2"){
+              case class strategyAction(t:String) extends Action(t){
+                def apply()=controller.get.SET_STRATEGY(1,2)
+              }
+              val a=new strategyAction("Set: Player 2")
+              this.action_=(a)
+            }
+            val p3=new MenuItem("Player 3"){
+              case class strategyAction(t:String) extends Action(t){
+                def apply()=controller.get.SET_STRATEGY(2,2)
+              }
+              val a=new strategyAction("Set: Player 3")
+              this.action_=(a)
+            }
+            val p4=new MenuItem("Player 4"){
+              case class strategyAction(t:String) extends Action(t){
+                def apply()=controller.get.SET_STRATEGY(3,2)
+              }
+              val a=new strategyAction("Set: Player 4")
+              this.action_=(a)
+            }
             contents+=p1;contents+=p2;contents+=p3;contents+=p4;
           }
-          val m4=new Menu("Strategy 4: Description"){
-            strategy=3
-            val p1=new MenuItem("Player 1")
-            val p2=new MenuItem("Player 2")
-            val p3=new MenuItem("Player 3")
-            val p4=new MenuItem("Player 4")
+          val m4=new Menu("Strategy 4: Diamonds"){
+
+             val p1=new MenuItem("Player 1"){
+              //modify action to be a controller set strategy thing
+              case class strategyAction(t:String) extends Action(t){
+                def apply()=controller.get.SET_STRATEGY(0,3)
+              }
+              val a=new strategyAction("Set: Player 1")
+              this.action_=(a)
+            }
+            val p2=new MenuItem("Player 2"){
+              case class strategyAction(t:String) extends Action(t){
+                def apply()=controller.get.SET_STRATEGY(1,3)
+              }
+              val a=new strategyAction("Set: Player 2")
+              this.action_=(a)
+            }
+            val p3=new MenuItem("Player 3"){
+              case class strategyAction(t:String) extends Action(t){
+                def apply()=controller.get.SET_STRATEGY(2,3)
+              }
+              val a=new strategyAction("Set: Player 3")
+              this.action_=(a)
+            }
+            val p4=new MenuItem("Player 4"){
+              case class strategyAction(t:String) extends Action(t){
+                def apply()=controller.get.SET_STRATEGY(3,3)
+              }
+              val a=new strategyAction("Set: Player 4")
+              this.action_=(a)
+            }
             contents+=p1;contents+=p2;contents+=p3;contents+=p4;
           }
           contents+=m1
@@ -208,21 +303,21 @@ object Gui extends View{
   
     
   /*
-  def card0Update(s:String)={
-    gui.cardArea.p1Card.text_=(s)
+  def card0Update(c:Card)={
+    gui.cardArea.p1Card.text_=(c.rank.toString+c.suit(0).toString))
   }
   
-  def card1update(s:String)={
-    gui.cardArea.p2Card.text_=(s)
+  def card1update(c:Card)={
+    gui.cardArea.p2Card.text_=(c.rank.toString+c.suit(0).toString))
   }
   
   
-  def card2Update(s:String)={
-    gui.cardArea.p3Card.text_=(s)
+  def card2Update(c:Card)={
+    gui.cardArea.p3Card.text_=(c.rank.toString+c.suit(0).toString))
   }
   
-  def card3Update(s:String)={
-    gui.cardArea.p4Card.text_=(s)
+  def card3Update(c:Card)={
+    gui.cardArea.p4Card.text_=(c.rank.toString+c.suit(0).toString))
   }
   */
     
