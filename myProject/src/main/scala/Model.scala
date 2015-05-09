@@ -66,8 +66,66 @@ class Hand (val seat:Int, var strategy: Int){
     clubList=List[Card]()
     diamondList=List[Card]()
   }
-  
-  
+ // MILESTONE 8 SUBMISSION:  PREP TO TRADE SHOULD TAKE THE LARGEST 3 CARDS ACCORDING
+ // TO STRATEGY AND RETURN A DECK OF THE CARDS THEY WISH TO TRADE.
+  def prepToTrade(strategy:Int):Deck=  (strategy) match{
+    case (0) =>{
+      val tradeDeck=new Deck
+      var count=0
+      while (count<=3){
+        for (x<-0 to 3){
+          while (!cardArray(x).isEmpty){
+            tradeDeck.cards.push(cardArray(x).last)
+            cardArray(x)=cardArray(x).init
+            count+=1
+          }
+        }  
+      }
+    tradeDeck
+    }
+    case (1) =>{
+      val tradeDeck=new Deck
+      var count=0
+      while (count<=3){
+        for (x<-0 to 3){
+          while (!cardArray((x+1)%4).isEmpty){
+            tradeDeck.cards.push(cardArray((x+1)%4).last)
+            cardArray((x+1)%4)=cardArray((x+1)%4).init
+            count+=1
+          }
+        }  
+      }
+    tradeDeck
+    }
+    case (2) =>{
+      val tradeDeck=new Deck
+      var count=0
+      while (count<=3){
+        for (x<-0 to 3){
+          while (!cardArray((x+2)%4).isEmpty){
+            tradeDeck.cards.push(cardArray((x+2)%4).last)
+            cardArray((x+2)%4)=cardArray((x+2)%4).init
+            count+=1
+          }
+        }  
+      }
+    tradeDeck
+    }
+    case (3) =>{
+      val tradeDeck=new Deck
+      var count=0
+      while (count<=3){
+        for (x<-0 to 3){
+          while (!cardArray((x+3)%4).isEmpty){
+            tradeDeck.cards.push(cardArray((x+3)%4).last)
+            cardArray((x+3)%4)=cardArray((x+3)%4).init
+            count+=1
+          }
+        }  
+      }
+    tradeDeck
+    }
+  }
 
   def showHand={
     println("Player "+seat.toString+" has:")//seat refers to the player number
@@ -414,6 +472,7 @@ class TurnQueue extends Queue[Int]{
   var handArray=Array.ofDim[Hand](4)
   var playArea=new PlayArea
   val queue= new TurnQueue
+  var tradeTracker=0
   var round=0
   var trick=0
   var lastHandWentTo= -1
@@ -443,6 +502,31 @@ class TurnQueue extends Queue[Int]{
     handArray(1)=hand1
     handArray(2)=hand2
     handArray(3)=hand3
+    if (tradeTracker>3){
+      val trade0=handArray(0).prepToTrade(hand0.strategy)
+      val trade1=handArray(1).prepToTrade(hand1.strategy)
+      val trade2=handArray(2).prepToTrade(hand2.strategy)
+      val trade3=handArray(3).prepToTrade(hand3.strategy)
+      if (tradeTracker==0){
+        hand0.draw(trade1)
+        hand1.draw(trade2)
+        hand2.draw(trade3)
+        hand3.draw(trade0)
+      }
+      else if(tradeTracker==1){
+        hand0.draw(trade3)
+        hand1.draw(trade0)
+        hand2.draw(trade1)
+        hand3.draw(trade2)
+      }
+      else{
+        hand0.draw(trade2)
+        hand1.draw(trade3)
+        hand2.draw(trade0)
+        hand3.draw(trade1)
+        }
+      tradeTracker=(tradeTracker+1)%4
+      }
     trick=0 
     round=0
     
