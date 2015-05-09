@@ -74,7 +74,6 @@ class Controller(view:View,model:Model) {
     val cards=model.playArea.cards
     //view.playCards(cards)
     SHOW_PLAYING_AREA
-    
     GET_SCORES
     WINNER_CHECK
   }

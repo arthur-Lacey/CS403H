@@ -74,7 +74,6 @@ class Controller(view:View,model:Model) {
     val cards=model.playArea.cards
     //view.playCards(cards)
     SHOW_PLAYING_AREA
-    
     GET_SCORES
     WINNER_CHECK
   }
@@ -97,8 +96,6 @@ class Controller(view:View,model:Model) {
     SHOW_PLAYING_AREA
     WINNER_CHECK
     GET_SCORES
-    SHOW_PLAY
-    INIT
   }
   def INIT{
     model.init

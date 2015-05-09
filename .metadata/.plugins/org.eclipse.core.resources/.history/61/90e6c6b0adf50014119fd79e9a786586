@@ -252,7 +252,7 @@ class Hand (val seat:Int, var strategy: Int){
     if (clubList.isEmpty) play("Any",0)
     else{
       val tempCard = clubList.head
-      clubList= clubList.tail
+      clubList= spadeList.tail
       tempCard
     }
    }
