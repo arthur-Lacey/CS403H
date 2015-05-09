@@ -478,7 +478,6 @@ class TurnQueue extends Queue[Int]{
   var lastHandWentTo= -1
   var flag= false
   var tradeTracker=0
-  
   def init{
     scoreBoard.init
     hand0.init

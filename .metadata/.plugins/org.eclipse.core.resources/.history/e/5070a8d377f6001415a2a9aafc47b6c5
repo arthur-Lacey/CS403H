@@ -477,7 +477,6 @@ class TurnQueue extends Queue[Int]{
   var trick=0
   var lastHandWentTo= -1
   var flag= false
-  var tradeTracker=0
   
   def init{
     scoreBoard.init
@@ -503,31 +502,6 @@ class TurnQueue extends Queue[Int]{
     handArray(1)=hand1
     handArray(2)=hand2
     handArray(3)=hand3
-    if (tradeTracker>3){
-      val trade0=handArray(0).prepToTrade(hand0.strategy)
-      val trade1=handArray(1).prepToTrade(hand1.strategy)
-      val trade2=handArray(2).prepToTrade(hand2.strategy)
-      val trade3=handArray(3).prepToTrade(hand3.strategy)
-      if (tradeTracker==0){
-        hand0.draw(trade1)
-        hand1.draw(trade2)
-        hand2.draw(trade3)
-        hand3.draw(trade0)
-      }
-      else if(tradeTracker==1){
-        hand0.draw(trade3)
-        hand1.draw(trade0)
-        hand2.draw(trade1)
-        hand3.draw(trade2)
-      }
-      else{
-        hand0.draw(trade2)
-        hand1.draw(trade3)
-        hand2.draw(trade0)
-        hand3.draw(trade1)
-        }
-      tradeTracker=(tradeTracker+1)%4
-      }
     trick=0 
     round=0
     
