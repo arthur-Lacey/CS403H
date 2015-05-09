@@ -283,19 +283,18 @@ object Gui extends View{
       
        
       val cardArea=new BorderPanel{
-        
+        val winner=new Label("Winner Here")
         val p1Card=new Label("p1Card")
         val p2Card=new Label("p2Card")
         val p3Card=new Label("p3Card")
         val p4Card=new Label("p4Card")
         val scoreArea=new BoxPanel(Orientation.Vertical){
-          val winner=new Label("Winner Here")
           val scoreBoard=new Label("Scores")
           val p1Score=new Label("Player 1: ")
           val p2Score=new Label("Player 2: ")
           val p3Score=new Label("Player 3: ")
           val p4Score=new Label("Player 4: ")
-          contents+=winner
+          contents+=winne
           contents+=scoreBoard
           contents+=p1Score
           contents+=p2Score

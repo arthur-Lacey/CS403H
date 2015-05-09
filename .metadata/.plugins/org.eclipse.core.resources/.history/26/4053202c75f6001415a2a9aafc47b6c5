@@ -59,7 +59,7 @@ class Controller(view:View,model:Model) {
     var winString=""
     if (!model.scoreBoard.loserCheck){
       winString="No Winner Yet"
-      view.displayWinner(winString)
+      view.displayThis(winString)
       } 
     else {
       if (model.scoreBoard.winner==0) winString="player0 wins"

@@ -30,14 +30,13 @@ class Controller(view:View,model:Model) {
     
     view.displayThis("Player 3 has played: "+(model.playArea.cards(3).rank,model.playArea.cards(3).suit).toString)
     view.card1Update(model.playArea.cards(3).toString)
-    SHOW_PLAY
+    
     view.displayThis("-----")
     view.displayThis("The Scores Are:")
     view.displayThis("Player 0: "+model.scoreBoard.scores(0).toString)
     view.displayThis("Player 1: "+model.scoreBoard.scores(1).toString)
     view.displayThis("Player 2: "+model.scoreBoard.scores(2).toString)
     view.displayThis("Player 3: "+model.scoreBoard.scores(3).toString)
-    GET_SCORES
   }
   
   def SHOW_PLAYER_ORDER{
@@ -59,7 +58,7 @@ class Controller(view:View,model:Model) {
     var winString=""
     if (!model.scoreBoard.loserCheck){
       winString="No Winner Yet"
-      view.displayWinner(winString)
+      view.displayThis(winString)
       } 
     else {
       if (model.scoreBoard.winner==0) winString="player0 wins"
@@ -97,6 +96,8 @@ class Controller(view:View,model:Model) {
     while (!model.flag) model.completeTrick
     SHOW_PLAYING_AREA
     WINNER_CHECK
+    GET_SCORES
+    SHOW_PLAY
     INIT
   }
   def INIT{

@@ -84,7 +84,7 @@ class View {
   
   def refresh()=println("REFRESH YOSELF")
   
-  def displayWinner(s:String)=println("WINNER!!!" +s)
+  def displayWinner()=println("WINNER!!!")
   
   def card0Update(s:String)=println(s)
     
